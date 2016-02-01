@@ -17,28 +17,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kfD-RK-ZGQ">
-                                <rect key="frame" x="20" y="101" width="560" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test your keyboard:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFN-Vo-b3l">
                                 <rect key="frame" x="20" y="72" width="151" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bzl-zJ-OtF">
+                                <rect key="frame" x="20" y="101" width="560" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="FZc-c9-ImP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pI2-Cq-OGh">
+                                <rect key="frame" x="20" y="259" width="36" height="30"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearText" destination="BYZ-38-t0r" eventType="touchUpInside" id="fhZ-8z-x93"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.91885154904687982" blue="0.58687100515527879" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="leadingMargin" secondItem="kfD-RK-ZGQ" secondAttribute="leading" id="1ka-c5-lFF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kfD-RK-ZGQ" secondAttribute="trailing" id="9CU-pa-j31"/>
+                            <constraint firstItem="bzl-zJ-OtF" firstAttribute="top" secondItem="IFN-Vo-b3l" secondAttribute="bottom" constant="8" id="PT0-TC-hHj"/>
                             <constraint firstAttribute="leadingMargin" secondItem="IFN-Vo-b3l" secondAttribute="leading" id="Rkr-XR-ug5"/>
-                            <constraint firstItem="kfD-RK-ZGQ" firstAttribute="top" secondItem="IFN-Vo-b3l" secondAttribute="bottom" constant="8" id="X2R-f9-Czt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bzl-zJ-OtF" secondAttribute="trailing" id="WKy-HQ-aZ5"/>
                             <constraint firstItem="IFN-Vo-b3l" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="hSK-fD-7Db"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="bzl-zJ-OtF" secondAttribute="leading" id="xvD-A2-NHw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="MagicSpell" id="Qb2-LG-Kjn"/>
+                    <connections>
+                        <outlet property="testTextView" destination="bzl-zJ-OtF" id="csf-7u-xeC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
