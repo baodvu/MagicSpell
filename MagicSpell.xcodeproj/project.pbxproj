@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		63F7B10D1C5F052A00D491B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F7B10C1C5F052A00D491B5 /* AppDelegate.swift */; };
+		63F7B10F1C5F052A00D491B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F7B10E1C5F052A00D491B5 /* ViewController.swift */; };
+		63F7B1121C5F052A00D491B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63F7B1101C5F052A00D491B5 /* Main.storyboard */; };
+		63F7B1141C5F052A00D491B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63F7B1131C5F052A00D491B5 /* Assets.xcassets */; };
+		63F7B1171C5F052A00D491B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63F7B1151C5F052A00D491B5 /* LaunchScreen.storyboard */; };
+		63F7B1221C5F052A00D491B5 /* MagicSpellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F7B1211C5F052A00D491B5 /* MagicSpellTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		63F7B11E1C5F052A00D491B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63F7B1011C5F052A00D491B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63F7B1081C5F052A00D491B5;
+			remoteInfo = MagicSpell;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		63F7B1091C5F052A00D491B5 /* MagicSpell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicSpell.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63F7B10C1C5F052A00D491B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		63F7B10E1C5F052A00D491B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		63F7B1111C5F052A00D491B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		63F7B1131C5F052A00D491B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		63F7B1161C5F052A00D491B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		63F7B1181C5F052A00D491B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63F7B11D1C5F052A00D491B5 /* MagicSpellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagicSpellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		63F7B1211C5F052A00D491B5 /* MagicSpellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicSpellTests.swift; sourceTree = "<group>"; };
+		63F7B1231C5F052A00D491B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63F7B1061C5F052A00D491B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63F7B11A1C5F052A00D491B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		63F7B1001C5F052A00D491B5 = {
+			isa = PBXGroup;
+			children = (
+				63F7B10B1C5F052A00D491B5 /* MagicSpell */,
+				63F7B1201C5F052A00D491B5 /* MagicSpellTests */,
+				63F7B10A1C5F052A00D491B5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		63F7B10A1C5F052A00D491B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63F7B1091C5F052A00D491B5 /* MagicSpell.app */,
+				63F7B11D1C5F052A00D491B5 /* MagicSpellTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63F7B10B1C5F052A00D491B5 /* MagicSpell */ = {
+			isa = PBXGroup;
+			children = (
+				63F7B10C1C5F052A00D491B5 /* AppDelegate.swift */,
+				63F7B10E1C5F052A00D491B5 /* ViewController.swift */,
+				63F7B1101C5F052A00D491B5 /* Main.storyboard */,
+				63F7B1131C5F052A00D491B5 /* Assets.xcassets */,
+				63F7B1151C5F052A00D491B5 /* LaunchScreen.storyboard */,
+				63F7B1181C5F052A00D491B5 /* Info.plist */,
+			);
+			path = MagicSpell;
+			sourceTree = "<group>";
+		};
+		63F7B1201C5F052A00D491B5 /* MagicSpellTests */ = {
+			isa = PBXGroup;
+			children = (
+				63F7B1211C5F052A00D491B5 /* MagicSpellTests.swift */,
+				63F7B1231C5F052A00D491B5 /* Info.plist */,
+			);
+			path = MagicSpellTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63F7B1081C5F052A00D491B5 /* MagicSpell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63F7B1261C5F052A00D491B5 /* Build configuration list for PBXNativeTarget "MagicSpell" */;
+			buildPhases = (
+				63F7B1051C5F052A00D491B5 /* Sources */,
+				63F7B1061C5F052A00D491B5 /* Frameworks */,
+				63F7B1071C5F052A00D491B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MagicSpell;
+			productName = MagicSpell;
+			productReference = 63F7B1091C5F052A00D491B5 /* MagicSpell.app */;
+			productType = "com.apple.product-type.application";
+		};
+		63F7B11C1C5F052A00D491B5 /* MagicSpellTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63F7B1291C5F052A00D491B5 /* Build configuration list for PBXNativeTarget "MagicSpellTests" */;
+			buildPhases = (
+				63F7B1191C5F052A00D491B5 /* Sources */,
+				63F7B11A1C5F052A00D491B5 /* Frameworks */,
+				63F7B11B1C5F052A00D491B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63F7B11F1C5F052A00D491B5 /* PBXTargetDependency */,
+			);
+			name = MagicSpellTests;
+			productName = MagicSpellTests;
+			productReference = 63F7B11D1C5F052A00D491B5 /* MagicSpellTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63F7B1011C5F052A00D491B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Georgia Tech";
+				TargetAttributes = {
+					63F7B1081C5F052A00D491B5 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 6B5P6J522G;
+					};
+					63F7B11C1C5F052A00D491B5 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 6B5P6J522G;
+						TestTargetID = 63F7B1081C5F052A00D491B5;
+					};
+				};
+			};
+			buildConfigurationList = 63F7B1041C5F052A00D491B5 /* Build configuration list for PBXProject "MagicSpell" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 63F7B1001C5F052A00D491B5;
+			productRefGroup = 63F7B10A1C5F052A00D491B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63F7B1081C5F052A00D491B5 /* MagicSpell */,
+				63F7B11C1C5F052A00D491B5 /* MagicSpellTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63F7B1071C5F052A00D491B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63F7B1171C5F052A00D491B5 /* LaunchScreen.storyboard in Resources */,
+				63F7B1141C5F052A00D491B5 /* Assets.xcassets in Resources */,
+				63F7B1121C5F052A00D491B5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63F7B11B1C5F052A00D491B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63F7B1051C5F052A00D491B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63F7B10F1C5F052A00D491B5 /* ViewController.swift in Sources */,
+				63F7B10D1C5F052A00D491B5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63F7B1191C5F052A00D491B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63F7B1221C5F052A00D491B5 /* MagicSpellTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		63F7B11F1C5F052A00D491B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63F7B1081C5F052A00D491B5 /* MagicSpell */;
+			targetProxy = 63F7B11E1C5F052A00D491B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		63F7B1101C5F052A00D491B5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63F7B1111C5F052A00D491B5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		63F7B1151C5F052A00D491B5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63F7B1161C5F052A00D491B5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		63F7B1241C5F052A00D491B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		63F7B1251C5F052A00D491B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63F7B1271C5F052A00D491B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MagicSpell/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.gatech.cc.bvu.MagicSpell;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		63F7B1281C5F052A00D491B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MagicSpell/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.gatech.cc.bvu.MagicSpell;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		63F7B12A1C5F052A00D491B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MagicSpellTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.gatech.cc.bvu.MagicSpellTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MagicSpell.app/MagicSpell";
+			};
+			name = Debug;
+		};
+		63F7B12B1C5F052A00D491B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MagicSpellTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.gatech.cc.bvu.MagicSpellTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MagicSpell.app/MagicSpell";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63F7B1041C5F052A00D491B5 /* Build configuration list for PBXProject "MagicSpell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63F7B1241C5F052A00D491B5 /* Debug */,
+				63F7B1251C5F052A00D491B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63F7B1261C5F052A00D491B5 /* Build configuration list for PBXNativeTarget "MagicSpell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63F7B1271C5F052A00D491B5 /* Debug */,
+				63F7B1281C5F052A00D491B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		63F7B1291C5F052A00D491B5 /* Build configuration list for PBXNativeTarget "MagicSpellTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63F7B12A1C5F052A00D491B5 /* Debug */,
+				63F7B12B1C5F052A00D491B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63F7B1011C5F052A00D491B5 /* Project object */;
+}
