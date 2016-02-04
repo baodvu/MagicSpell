@@ -16,6 +16,7 @@
                 <outlet property="rightPinkyFingerButton" destination="F3K-OF-cJy" id="HMa-Kg-zt7"/>
                 <outlet property="rightRingFingerButton" destination="z7X-72-3cc" id="RFe-rG-25d"/>
                 <outlet property="rightThumbFingerButton" destination="IcH-KO-fdJ" id="pLm-dB-GUa"/>
+                <outlet property="visibilitySwitch" destination="QD2-Ft-Djd" id="muK-v7-DoC"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -152,25 +153,9 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="didTapFinger:" destination="-1" eventType="touchUpInside" id="CeA-qB-Meq"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3K-OF-cJy">
-                            <rect key="frame" x="840" y="53" width="96" height="148"/>
-                            <color key="backgroundColor" red="0.97343340970000003" green="0.97343340970000003" blue="0.97343340970000003" alpha="1" colorSpace="calibratedRGB"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                    <integer key="value" value="5"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                    <integer key="value" value="1"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                    <color key="value" red="0.3880890052" green="0.3880890052" blue="0.3880890052" alpha="1" colorSpace="calibratedRGB"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                            <connections>
-                                <action selector="didTapFinger:" destination="-1" eventType="touchUpInside" id="ic1-vO-6Ab"/>
+                                <action selector="touchDownFinger:" destination="-1" eventType="touchDown" id="laq-CK-zju"/>
+                                <action selector="touchUpFinger:" destination="-1" eventType="touchUpInside" id="Bwx-iK-Lgf"/>
+                                <action selector="touchUpFinger:" destination="-1" eventType="touchUpOutside" id="uQd-xT-xsF"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IcH-KO-fdJ">
@@ -188,7 +173,9 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="didTapFinger:" destination="-1" eventType="touchUpInside" id="i8u-7Q-f3s"/>
+                                <action selector="touchDownFinger:" destination="-1" eventType="touchDown" id="cC5-Tk-1la"/>
+                                <action selector="touchUpFinger:" destination="-1" eventType="touchUpOutside" id="Vg2-cj-L5C"/>
+                                <action selector="touchUpFinger:" destination="-1" eventType="touchUpInside" id="wU8-PA-aMz"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGS-Cw-XuK">
@@ -206,7 +193,9 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="didTapFinger:" destination="-1" eventType="touchDown" id="UL2-HG-Zo0"/>
+                                <action selector="touchDownFinger:" destination="-1" eventType="touchDown" id="Mmq-d5-A9T"/>
+                                <action selector="touchUpFinger:" destination="-1" eventType="touchUpOutside" id="2sv-84-oor"/>
+                                <action selector="touchUpFinger:" destination="-1" eventType="touchUpInside" id="VwL-Nh-daR"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBV-fi-Mfj">
@@ -224,7 +213,9 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="didTapFinger:" destination="-1" eventType="touchUpInside" id="wSV-fz-kV8"/>
+                                <action selector="touchDownFinger:" destination="-1" eventType="touchDown" id="0yR-5r-hOL"/>
+                                <action selector="touchUpFinger:" destination="-1" eventType="touchUpOutside" id="qci-5T-SsG"/>
+                                <action selector="touchUpFinger:" destination="-1" eventType="touchUpInside" id="tKu-In-F8K"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVi-6P-CaR">
@@ -242,7 +233,9 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="didTapFinger:" destination="-1" eventType="touchUpInside" id="ewG-Wc-Uj1"/>
+                                <action selector="touchDownFinger:" destination="-1" eventType="touchDown" id="NdP-5p-Or3"/>
+                                <action selector="touchUpFinger:" destination="-1" eventType="touchUpInside" id="inp-R2-9HN"/>
+                                <action selector="touchUpFinger:" destination="-1" eventType="touchUpOutside" id="vP1-KY-fF1"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQX-3I-tth">
@@ -260,7 +253,9 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="didTapFinger:" destination="-1" eventType="touchUpInside" id="nmg-1n-M1T"/>
+                                <action selector="touchDownFinger:" destination="-1" eventType="touchDown" id="iYJ-AX-0h0"/>
+                                <action selector="touchUpFinger:" destination="-1" eventType="touchUpOutside" id="9cL-IV-aLv"/>
+                                <action selector="touchUpFinger:" destination="-1" eventType="touchUpInside" id="WuJ-rL-FBT"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WaV-Jo-uR1">
@@ -278,7 +273,9 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="didTapFinger:" destination="-1" eventType="touchUpInside" id="MAp-hF-7cK"/>
+                                <action selector="touchDownFinger:" destination="-1" eventType="touchDown" id="xYT-9Y-yfy"/>
+                                <action selector="touchUpFinger:" destination="-1" eventType="touchUpInside" id="PRG-A6-gZq"/>
+                                <action selector="touchUpFinger:" destination="-1" eventType="touchUpOutside" id="ukB-ZS-bCp"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZwD-GV-kaU">
@@ -296,7 +293,9 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="didTapFinger:" destination="-1" eventType="touchUpInside" id="GKR-3o-c2U"/>
+                                <action selector="touchDownFinger:" destination="-1" eventType="touchDown" id="CjP-DW-dqr"/>
+                                <action selector="touchUpFinger:" destination="-1" eventType="touchUpOutside" id="iY8-xZ-eAG"/>
+                                <action selector="touchUpFinger:" destination="-1" eventType="touchUpInside" id="zL0-SR-JrC"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7X-72-3cc">
@@ -314,12 +313,40 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="didTapFinger:" destination="-1" eventType="touchUpInside" id="9BG-05-UHG"/>
+                                <action selector="touchDownFinger:" destination="-1" eventType="touchDown" id="gfW-BO-EQ6"/>
+                                <action selector="touchUpFinger:" destination="-1" eventType="touchUpOutside" id="kkL-yq-5Da"/>
+                                <action selector="touchUpFinger:" destination="-1" eventType="touchUpInside" id="rEn-TM-ybB"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3K-OF-cJy">
+                            <rect key="frame" x="840" y="53" width="96" height="148"/>
+                            <color key="backgroundColor" red="0.97343340970000003" green="0.97343340970000003" blue="0.97343340970000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                    <color key="value" red="0.3880890052" green="0.3880890052" blue="0.3880890052" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="touchDownFinger:" destination="-1" eventType="touchDown" id="zPx-jh-bOP"/>
+                                <action selector="touchUpFinger:" destination="-1" eventType="touchUpOutside" id="BDT-tf-wTf"/>
+                                <action selector="touchUpFinger:" destination="-1" eventType="touchUpInside" id="URa-TN-YF0"/>
                             </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QD2-Ft-Djd">
+                    <rect key="frame" x="8" y="293" width="51" height="31"/>
+                    <connections>
+                        <action selector="toggleVisibility:" destination="-1" eventType="valueChanged" id="THQ-Jg-Oge"/>
+                    </connections>
+                </switch>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
