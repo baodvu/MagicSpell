@@ -16,6 +16,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         testTextView.becomeFirstResponder()
+        
+//        if #available(iOS 9.0, *) {
+            let item : UITextInputAssistantItem = testTextView.inputAssistantItem
+            item.leadingBarButtonGroups = []
+            item.trailingBarButtonGroups = []
     }
 
     override func didReceiveMemoryWarning() {
