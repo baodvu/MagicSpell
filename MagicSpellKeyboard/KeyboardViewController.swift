@@ -42,6 +42,7 @@ class KeyboardViewController: UIInputViewController {
         let nib = UINib(nibName: "CustomKeyboardInterface", bundle: nil)
         let objects = nib.instantiateWithOwner(self, options: nil)
         customInterface = objects[0] as! UIView
+        customInterface.frame = view.frame
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -61,7 +62,6 @@ class KeyboardViewController: UIInputViewController {
         // Set up view's dimension
         
         view.addSubview(customInterface)
-        
         
         keyArray = [leftPinkyFingerButton, leftRingFingerButton, leftMiddleFingerButton, leftIndexFingerButton, leftThumbFingerButton, rightPinkyFingerButton, rightRingFingerButton, rightMiddleFingerButton, rightIndexFingerButton, rightThumbFingerButton]
         for key in keyArray {
