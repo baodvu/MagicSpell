@@ -1,4 +1,4 @@
 language: objective-c
 osx_image: xcode7.3
 script:
-  - xctool test -project MagicSpell.xcodeproj -scheme MagicSpell
+  - xctool test -project MagicSpell.xcodeproj -scheme MagicSpellKeyboard
