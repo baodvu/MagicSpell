@@ -1,0 +1,15 @@
+approve_by_comment: true
+approve_regex: '^(Approved|lgtm|LGTM|:shipit:|:star:|:\+1:|:ship:)'
+reject_regex: ^Rejected
+reset_on_push: true
+required: true
+author_approval: ignored
+reviewers:
+  members:
+    - baodvu
+    - dlam30
+    - dritter3
+    - fwang92
+    - lingyili
+  name: default
+  required: 1
