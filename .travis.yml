@@ -1,4 +1,4 @@
 language: objective-c
 osx_image: xcode7.3
 script:
-  - xctool test -project MagicSpell.xcodeproj -scheme MagicSpellKeyboard
+  - xctool test -project MagicSpell.xcodeproj -scheme MagicSpellKeyboard clean build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
