@@ -1,4 +1,5 @@
 # MagicSpell
+[![Build Status](https://travis-ci.org/baodvu/MagicSpell.svg?branch=master)](https://travis-ci.org/baodvu/MagicSpell)
 
 A new and exciting way to type on iOS tablets.
 MagicSpell aims to assist children with dyslexia in improving spelling skills by typing.
