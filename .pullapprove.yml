@@ -11,5 +11,6 @@ reviewers:
     - dritter3
     - fwang92
     - lingyili
+    - solanata
   name: default
   required: 1
