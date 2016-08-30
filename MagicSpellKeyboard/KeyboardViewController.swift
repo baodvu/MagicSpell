@@ -1,16 +1,6 @@
-//
-//  KeyboardViewController.swift
-//  MagicSpellKeyboard
-//
-//  Created by Bao Vu on 1/31/16.
-//  Copyright © 2016 Georgia Tech. All rights reserved.
-//
-
 import UIKit
 
 class KeyboardViewController: UIInputViewController {
-
-    @IBOutlet var nextKeyboardButton: UIButton!
     
     @IBOutlet weak var leftPinkyFingerButton: UIButton!
     @IBOutlet weak var leftRingFingerButton: UIButton!
@@ -48,18 +38,9 @@ class KeyboardViewController: UIInputViewController {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    override func updateViewConstraints() {
-        super.updateViewConstraints()
     
-        // Add custom view sizing constraints here
-//        setUpHeightConstraint()
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Set up view's dimension
         
         view.addSubview(customInterface)
         
@@ -73,54 +54,34 @@ class KeyboardViewController: UIInputViewController {
         super.viewDidAppear(animated)
         
         setUpHeightConstraint()
-        resizeKeyboard()
     }
     
-    func addKeyboardButtons() {
-        addNextKeyboardButton()
-    }
-    
-    func addNextKeyboardButton() {
-        self.nextKeyboardButton = UIButton(type: .System)
+    func setUpHeightConstraint() {
+        let customHeight: CGFloat = keyboardHeight
         
-        self.nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard", comment: "Title for 'Next Keyboard' button"), forState: .Normal)
-        self.nextKeyboardButton.sizeToFit()
-        self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        self.nextKeyboardButton.addTarget(self, action: #selector(UIInputViewController.advanceToNextInputMode), forControlEvents: .TouchUpInside)
-        
-        self.view.addSubview(self.nextKeyboardButton)
-        
-        self.nextKeyboardButton.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor).active = true
-        self.nextKeyboardButton.bottomAnchor.constraintEqualToAnchor(self.view.bottomAnchor).active = true
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated
-    }
-
-    override func textWillChange(textInput: UITextInput?) {
-        // The app is about to change the document's contents. Perform any preparation here.
-    }
-
-    override func textDidChange(textInput: UITextInput?) {
-        // The app has just changed the document's contents, the document context has been updated.
-    
-//        let textColor: UIColor
-//        let proxy = self.textDocumentProxy
-//        if proxy.keyboardAppearance == UIKeyboardAppearance.Dark {
-//            textColor = UIColor.whiteColor()
-//        } else {
-//            textColor = UIColor.blackColor()
-//        }
-//        self.nextKeyboardButton.setTitleColor(textColor, forState: .Normal)
+        if heightConstraint == nil {
+            heightConstraint = NSLayoutConstraint(
+                item: self.view,
+                attribute: .Height,
+                relatedBy: .Equal,
+                toItem: nil,
+                attribute: .NotAnAttribute,
+                multiplier: 0.0,
+                constant: customHeight
+            )
+            heightConstraint.priority = UILayoutPriority(999)
+            
+            view.addConstraint(heightConstraint)
+        } else {
+            heightConstraint.constant = customHeight
+        }
     }
     
     func insertTextToDocumentProxy(text: String) {
         let proxy = textDocumentProxy as UITextDocumentProxy
         proxy.insertText(text)
     }
+    
     // MARK: Key actions
     
     @IBAction func didTapNextKeyboard(sender: UIButton) {
@@ -233,48 +194,8 @@ class KeyboardViewController: UIInputViewController {
         if visibilitySwitch.on {
             sender.backgroundColor = normalButtonColor
         }
-//        if let foundIndex = keyPressed.indexOf(sender) {
-//            keyPressed.removeAtIndex(foundIndex)
-//        }
         
         keyPressed = []
-    }
-    
-    func setUpHeightConstraint() {
-        let customHeight: CGFloat = keyboardHeight
-        
-        if heightConstraint == nil {
-            heightConstraint = NSLayoutConstraint(
-                item: self.view,
-                attribute: .Height,
-                relatedBy: .Equal,
-                toItem: nil,
-                attribute: .NotAnAttribute,
-                multiplier: 0.0,
-                constant: customHeight
-            )
-            heightConstraint.priority = UILayoutPriority(999)
-            
-            view.addConstraint(heightConstraint)
-        } else {
-            heightConstraint.constant = customHeight
-        }
-    }
-    
-    func resizeKeyboard() {
-        let multiplier: CGFloat = 1.0
-        let leftKeyArray = [leftPinkyFingerButton, leftRingFingerButton, leftMiddleFingerButton, leftIndexFingerButton, leftThumbFingerButton]
-        let rightKeyArray = [rightPinkyFingerButton, rightRingFingerButton, rightMiddleFingerButton, rightIndexFingerButton, rightThumbFingerButton]
-        let midPoint = (rightThumbFingerButton.frame.origin.x + (leftThumbFingerButton.frame.origin.x + leftThumbFingerButton.frame.size.width))/2
-        let deltaX = midPoint*(1 - multiplier)
-        
-        for key in leftKeyArray + rightKeyArray{
-            key.frame.size.height *= multiplier
-            key.frame.size.width *= multiplier
-            key.frame.origin.x *= multiplier
-            key.frame.origin.x += deltaX
-            key.frame.origin.y *= multiplier
-        }
     }
     
     @IBAction func toggleVisibility(sender: UISwitch) {
@@ -288,5 +209,4 @@ class KeyboardViewController: UIInputViewController {
             }
         }
     }
-
 }
