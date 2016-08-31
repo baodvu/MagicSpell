@@ -13,18 +13,24 @@ class KeyboardViewController: UIInputViewController {
     @IBOutlet weak var rightRingFingerButton: UIButton!
     @IBOutlet weak var rightPinkyFingerButton: UIButton!
     @IBOutlet weak var rightThumbFingerButton: UIButton!
+    
     @IBOutlet weak var visibilitySwitch: UISwitch!
     
     var customInterface: UIView!
+    var proxy: UITextDocumentProxy {
+        get { return textDocumentProxy as UITextDocumentProxy }
+    }
+    
+    var buttonToFinger = [UIButton: Finger]()
     
     var heightConstraint: NSLayoutConstraint!
-    
     let keyboardHeight:CGFloat = 400
-    var keyPressed = [UIButton]()
-    var normalButtonColor = UIColor.init(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.75)
-    var pressedButtonColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.75)
-    var transparentButtonColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 0)
-    var keyArray = [UIButton]()
+    
+    let normalButtonColor = UIColor.init(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.75)
+    let pressedButtonColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.75)
+    let transparentButtonColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 0)
+    
+    var fingersPressed = Set<Finger>()
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -43,9 +49,20 @@ class KeyboardViewController: UIInputViewController {
         super.viewDidLoad()
         
         view.addSubview(customInterface)
+
+        buttonToFinger[leftPinkyFingerButton!] = Finger(side: .Left, name: .Pinky)
+        buttonToFinger[leftRingFingerButton!] = Finger(side: .Left, name: .Ring)
+        buttonToFinger[leftMiddleFingerButton!] = Finger(side: .Left, name: .Middle)
+        buttonToFinger[leftIndexFingerButton!] = Finger(side: .Left, name: .Index)
+        buttonToFinger[leftThumbFingerButton!] = Finger(side: .Left, name: .Thumb)
         
-        keyArray = [leftPinkyFingerButton, leftRingFingerButton, leftMiddleFingerButton, leftIndexFingerButton, leftThumbFingerButton, rightPinkyFingerButton, rightRingFingerButton, rightMiddleFingerButton, rightIndexFingerButton, rightThumbFingerButton]
-        for key in keyArray {
+        buttonToFinger[rightPinkyFingerButton!] = Finger(side: .Right, name: .Pinky)
+        buttonToFinger[rightRingFingerButton!] = Finger(side: .Right, name: .Ring)
+        buttonToFinger[rightMiddleFingerButton!] = Finger(side: .Right, name: .Middle)
+        buttonToFinger[rightIndexFingerButton!] = Finger(side: .Right, name: .Index)
+        buttonToFinger[rightThumbFingerButton!] = Finger(side: .Right, name: .Thumb)
+        
+        for key in buttonToFinger.keys {
             key.backgroundColor = normalButtonColor
         }
     }
@@ -77,134 +94,71 @@ class KeyboardViewController: UIInputViewController {
         }
     }
     
-    func insertTextToDocumentProxy(text: String) {
-        let proxy = textDocumentProxy as UITextDocumentProxy
-        proxy.insertText(text)
-    }
-    
     // MARK: Key actions
     
-    @IBAction func didTapNextKeyboard(sender: UIButton) {
+    @IBAction func didTapNextKeyboard() {
         self.advanceToNextInputMode()
     }
     
     @IBAction func didTapComma() {
-        insertTextToDocumentProxy(",")
+        proxy.insertText(",")
     }
     
     @IBAction func didTapPeriod() {
-        insertTextToDocumentProxy(".")
+        proxy.insertText(".")
     }
     
     @IBAction func didTapSpaceBar() {
-        insertTextToDocumentProxy(" ")
+        proxy.insertText(" ")
     }
     
     @IBAction func didTapBackspace() {
-        let proxy = textDocumentProxy as UITextDocumentProxy
         proxy.deleteBackward()
     }
     
     @IBAction func didTapEnter() {
-        insertTextToDocumentProxy("\n")
+        proxy.insertText("\n")
     }
     
     @IBAction func touchDownFinger(sender: UIButton) {
         if visibilitySwitch.on {
             sender.backgroundColor = pressedButtonColor
         }
-        let proxy = textDocumentProxy as UITextDocumentProxy
-        if keyPressed.count == 0 {
-            switch sender {
-            case leftPinkyFingerButton:
-                proxy.insertText("a")
-            case leftRingFingerButton:
-                proxy.insertText("b")
-            case leftMiddleFingerButton:
-                proxy.insertText("c")
-            case leftIndexFingerButton:
-                proxy.insertText("d")
-            case leftThumbFingerButton:
-                proxy.insertText("e")
-            case rightPinkyFingerButton:
-                proxy.insertText("j")
-            case rightRingFingerButton:
-                proxy.insertText("i")
-            case rightMiddleFingerButton:
-                proxy.insertText("h")
-            case rightIndexFingerButton:
-                proxy.insertText("g")
-            case rightThumbFingerButton:
-                proxy.insertText("f")
-            default:
-                break
+        
+        let finger = buttonToFinger[sender]!
+        fingersPressed.insert(finger)
+
+        switch fingersPressed.count {
+        case 1:
+            if let letter = LetterMapping.getLetter(fingersPressed) {
+                proxy.insertText(letter)
             }
-            keyPressed += [sender]
-        } else if keyPressed.count == 1 {
-            proxy.deleteBackward()
-            keyPressed += [sender]
-            if keyEquals(keyPressed, key1: leftPinkyFingerButton, key2: rightPinkyFingerButton) {
-                proxy.insertText("k")
-            } else if keyEquals(keyPressed, key1: leftRingFingerButton, key2: rightRingFingerButton) {
-                proxy.insertText("l")
-            } else if keyEquals(keyPressed, key1: leftMiddleFingerButton, key2: rightMiddleFingerButton) {
-                proxy.insertText("m")
-            } else if keyEquals(keyPressed, key1: leftIndexFingerButton, key2: rightIndexFingerButton) {
-                proxy.insertText("n")
-            } else if keyEquals(keyPressed, key1: leftThumbFingerButton, key2: rightThumbFingerButton) {
-                proxy.insertText("o")
-            } else if keyEquals(keyPressed, key1: leftPinkyFingerButton, key2: leftThumbFingerButton) {
-                proxy.insertText("p")
-            } else if keyEquals(keyPressed, key1: leftRingFingerButton, key2: leftThumbFingerButton) {
-                proxy.insertText("q")
-            } else if keyEquals(keyPressed, key1: leftMiddleFingerButton, key2: leftThumbFingerButton) {
-                proxy.insertText("r")
-            } else if keyEquals(keyPressed, key1: leftIndexFingerButton, key2: leftThumbFingerButton) {
-                proxy.insertText("s")
-            } else if keyEquals(keyPressed, key1: rightIndexFingerButton, key2: rightThumbFingerButton) {
-                proxy.insertText("t")
-            } else if keyEquals(keyPressed, key1: rightMiddleFingerButton, key2: rightThumbFingerButton) {
-                proxy.insertText("u")
-            } else if keyEquals(keyPressed, key1: rightRingFingerButton, key2: rightThumbFingerButton) {
-                proxy.insertText("v")
-            } else if keyEquals(keyPressed, key1: rightPinkyFingerButton, key2: rightThumbFingerButton) {
-                proxy.insertText("w")
-            } else if keyEquals(keyPressed, key1: leftPinkyFingerButton, key2: leftRingFingerButton) {
-                proxy.insertText("x")
-            } else if keyEquals(keyPressed, key1: leftMiddleFingerButton, key2: leftIndexFingerButton) {
-                proxy.insertText("y")
-            } else if keyEquals(keyPressed, key1: rightMiddleFingerButton, key2: rightIndexFingerButton) {
-                proxy.insertText("z")
-            } else if keyEquals(keyPressed, key1: rightRingFingerButton, key2: rightPinkyFingerButton) {
+        case 2:
+            if let letter = LetterMapping.getLetter(fingersPressed) {
                 proxy.deleteBackward()
+                proxy.insertText(letter)
             } else {
-                keyPressed = []
+                fingersPressed.removeAll()
             }
-        } else {
-            keyPressed = []
+        default: fingersPressed.removeAll()
         }
     }
-    
-    func keyEquals(keyArray: Array<UIButton>, key1: UIButton, key2: UIButton) -> Bool {
-        return (keyArray[0] == key1 && keyArray[1] == key2) || (keyArray[1] == key1 && keyArray[0] == key2)
-    }
-    
     
     @IBAction func touchUpFinger(sender: UIButton) {
         if visibilitySwitch.on {
             sender.backgroundColor = normalButtonColor
         }
         
-        keyPressed = []
+        fingersPressed.removeAll()
     }
     
     @IBAction func toggleVisibility(sender: UISwitch) {
         if sender.on {
-            for key in keyArray {
+            for key in buttonToFinger.keys {
                 key.backgroundColor = normalButtonColor
             }
         } else {
-            for key in keyArray {
+            for key in buttonToFinger.keys {
                 key.backgroundColor = transparentButtonColor
             }
         }

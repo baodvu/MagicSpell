@@ -48,7 +48,7 @@
                         </mask>
                     </variation>
                     <connections>
-                        <action selector="didTapNextKeyboard:" destination="-1" eventType="touchUpInside" id="cbp-ig-Slw"/>
+                        <action selector="didTapNextKeyboard" destination="-1" eventType="touchUpInside" id="IKY-4G-zAg"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPk-1i-epP" userLabel="Enter">
