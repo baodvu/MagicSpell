@@ -18,6 +18,10 @@
 		63F7B1351C5F091600D491B5 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F7B1341C5F091600D491B5 /* KeyboardViewController.swift */; };
 		63F7B1391C5F091600D491B5 /* MagicSpellKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 63F7B1321C5F091600D491B5 /* MagicSpellKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		63F7B13F1C5F0A0400D491B5 /* CustomKeyboardInterface.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63F7B13E1C5F0A0400D491B5 /* CustomKeyboardInterface.xib */; };
+		ACE4E9501D77490E00BE2C31 /* InstrPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4E94F1D77490E00BE2C31 /* InstrPageTableViewCell.swift */; };
+		ACE4E9541D77498200BE2C31 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE4E9531D77498200BE2C31 /* UIView+Layout.m */; };
+		ACE4E9561D774A7200BE2C31 /* MacroFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4E9551D774A7200BE2C31 /* MacroFunction.swift */; };
+		ACE4E9581D774AB300BE2C31 /* InstrPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4E9571D774AB300BE2C31 /* InstrPageViewController.swift */; };
 		F38B91641D752D7100B6F45F /* Finger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38B91631D752D7100B6F45F /* Finger.swift */; };
 		F38B91661D75362300B6F45F /* LetterMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38B91651D75362300B6F45F /* LetterMapping.swift */; };
 /* End PBXBuildFile section */
@@ -70,6 +74,12 @@
 		63F7B1341C5F091600D491B5 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		63F7B1361C5F091600D491B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63F7B13E1C5F0A0400D491B5 /* CustomKeyboardInterface.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomKeyboardInterface.xib; sourceTree = "<group>"; };
+		ACE4E94F1D77490E00BE2C31 /* InstrPageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrPageTableViewCell.swift; sourceTree = "<group>"; };
+		ACE4E9511D77498100BE2C31 /* MagicSpell-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MagicSpell-Bridging-Header.h"; sourceTree = "<group>"; };
+		ACE4E9521D77498200BE2C31 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		ACE4E9531D77498200BE2C31 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		ACE4E9551D774A7200BE2C31 /* MacroFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacroFunction.swift; sourceTree = "<group>"; };
+		ACE4E9571D774AB300BE2C31 /* InstrPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrPageViewController.swift; sourceTree = "<group>"; };
 		F38B91631D752D7100B6F45F /* Finger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Finger.swift; sourceTree = "<group>"; };
 		F38B91651D75362300B6F45F /* LetterMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterMapping.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +139,12 @@
 				63F7B1131C5F052A00D491B5 /* Assets.xcassets */,
 				63F7B1151C5F052A00D491B5 /* LaunchScreen.storyboard */,
 				63F7B1181C5F052A00D491B5 /* Info.plist */,
+				ACE4E94F1D77490E00BE2C31 /* InstrPageTableViewCell.swift */,
+				ACE4E9521D77498200BE2C31 /* UIView+Layout.h */,
+				ACE4E9531D77498200BE2C31 /* UIView+Layout.m */,
+				ACE4E9511D77498100BE2C31 /* MagicSpell-Bridging-Header.h */,
+				ACE4E9551D774A7200BE2C31 /* MacroFunction.swift */,
+				ACE4E9571D774AB300BE2C31 /* InstrPageViewController.swift */,
 			);
 			path = MagicSpell;
 			sourceTree = "<group>";
@@ -300,8 +316,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACE4E9581D774AB300BE2C31 /* InstrPageViewController.swift in Sources */,
+				ACE4E9541D77498200BE2C31 /* UIView+Layout.m in Sources */,
 				63F7B10F1C5F052A00D491B5 /* ViewController.swift in Sources */,
+				ACE4E9561D774A7200BE2C31 /* MacroFunction.swift in Sources */,
 				63F7B10D1C5F052A00D491B5 /* AppDelegate.swift in Sources */,
+				ACE4E9501D77490E00BE2C31 /* InstrPageTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +465,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -454,6 +475,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = edu.gatech.cc.bvu.MagicSpell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "MagicSpell/MagicSpell-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -462,6 +485,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -471,6 +495,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = edu.gatech.cc.bvu.MagicSpell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "MagicSpell/MagicSpell-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
