@@ -72,7 +72,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="ws2-tZ-ORH" kind="presentation" id="YSg-PU-YB8"/>
+                        <segue destination="ws2-tZ-ORH" kind="presentation" identifier="SegueForAddKeyboard" id="YSg-PU-YB8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S4e-gr-9ee" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -93,7 +93,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="Xeh-We-gHK" kind="presentation" id="Pog-5c-dRc"/>
+                        <segue destination="Xeh-We-gHK" kind="presentation" identifier="segueForSwitchKeyboard" id="Pog-5c-dRc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J2x-PK-Ips" userLabel="First Responder" sceneMemberID="firstResponder"/>
