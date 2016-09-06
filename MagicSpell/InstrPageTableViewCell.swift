@@ -12,6 +12,7 @@ class InstrPageTableViewCell: UITableViewCell {
 
     var imageViewForIcon: UIImageView!
     var labelForInstruction : UILabel!
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         makeView()
@@ -26,22 +27,20 @@ class InstrPageTableViewCell: UITableViewCell {
         
         imageViewForIcon = UIImageView()
         self.addSubview(imageViewForIcon)
-        labelForInstruction = UILabel()
-        labelForInstruction.font = UIFont.systemFontOfSize(12)
-        self.addSubview(labelForInstruction)
         
+        labelForInstruction = UILabel()
+        labelForInstruction.font = UIFont.systemFontOfSize(15)
+        self.addSubview(labelForInstruction)
     }
     
     override func layoutSubviews() {
-        imageViewForIcon.left = 5
-        imageViewForIcon.top = 2
-        imageViewForIcon.width = 25
-        imageViewForIcon.height = 25
+        imageViewForIcon.setWidth(25)
+        imageViewForIcon.setHeight(25)
+        imageViewForIcon.setLeft(5)
+        imageViewForIcon.setTop(self.contentView.height/2 - imageViewForIcon.height/2)
         
         labelForInstruction.sizeToFit()
-        labelForInstruction.left = (imageViewForIcon.right) + 10
-        labelForInstruction.top = self.contentView.height/2 - (labelForInstruction.height)/2
+        labelForInstruction.setLeft((imageViewForIcon.right) + 10)
+        labelForInstruction.setTop(self.contentView.height/2 - (labelForInstruction.height)/2)
     }
-
-
 }

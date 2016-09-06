@@ -7,25 +7,19 @@
 //
 
 import UIKit
+import Foundation
 
-class InstrPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class InstrPageViewController: UIViewController{
     
-    var tableViewForInstruction: UITableView!
-    var cellForInstruction : InstrPageTableViewCell!
     var labelForTitle : UILabel!
     var labelForSubtitle : UILabel!
     var btnForAlreadyDone : UIButton!
-    
-    var instructionSet = ["1.  Open your device settings", "2.  General", "3.  Keyboard", "4.  Keyboards", "5.  Add new keyboard", "6.  MagicSpell keyboard", "7.  Tap MagicSpell", "8.  Allow Full access"]
-    var instructionIcon = [UIImage(named:"setting-icon"), UIImage(named:"general-icon")]
+    var imageViewForLeft : UIImageView!
+    var imageViewForRight : UIImageView!
+    var btnForOpenSetting : UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        tableViewForInstruction = UITableView(frame: CGRectMake(0, 0, 0, 0))
-        tableViewForInstruction.dataSource = self
-        tableViewForInstruction.delegate = self
-        tableViewForInstruction.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         makeViews()
     }
     
@@ -35,71 +29,89 @@ class InstrPageViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func makeViews() {
-        self.view.backgroundColor = Hexcolor(0xD3D9DF)
         
         labelForTitle = UILabel()
-        labelForTitle.text = "MagicSpell"
-        labelForTitle.font = UIFont.systemFontOfSize(50)
+        labelForTitle.text = "Adding MagicSpell Keyboard"
+        labelForTitle.font = UIFont.systemFontOfSize(28)
+        labelForTitle.textColor = UIColor.Hexcolor(0x4A4A4A)
         labelForTitle.sizeToFit()
-        labelForTitle.left = UIScreen.mainScreen().bounds.size.width/2 - labelForTitle.width/2
-        labelForTitle.top = 50
+        labelForTitle.setLeft(UIScreen.mainScreen().bounds.size.width/2 - labelForTitle.width/2)
+        labelForTitle.setTop(50)
+        labelForTitle.autoresizingMask = [.FlexibleLeftMargin, .FlexibleRightMargin, .FlexibleBottomMargin, .FlexibleTopMargin]
         self.view.addSubview(labelForTitle)
         
         labelForSubtitle = UILabel()
-        labelForSubtitle.text = "To SetUp MagicSpell Keyboard, follow these steps:"
-        labelForSubtitle.font = UIFont.systemFontOfSize(13)
-        labelForSubtitle.sizeToFit()
-        labelForSubtitle.width = UIScreen.mainScreen().bounds.size.width
+        labelForSubtitle.text = "Click the button blow, open the Settings → Add New Keyboard...\n→ Select \"MagicSpell\""
+        labelForSubtitle.textColor = UIColor.Hexcolor(0x4A4A4A)
+        labelForSubtitle.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        labelForSubtitle.numberOfLines = 0
+        labelForSubtitle.font = UIFont.systemFontOfSize(20)
+        labelForSubtitle.setWidth(642)
+        labelForSubtitle.setHeight(68)
         labelForSubtitle.textAlignment = NSTextAlignment.Center
-        labelForSubtitle.left = 0
-        labelForSubtitle.top = labelForTitle.bottom + 50
+        labelForSubtitle.setLeft(UIScreen.mainScreen().bounds.size.width/2 - labelForSubtitle.width/2)
+        labelForSubtitle.setTop(labelForTitle.bottom + 50)
+        labelForSubtitle.autoresizingMask = [.FlexibleLeftMargin, .FlexibleRightMargin]
         self.view.addSubview(labelForSubtitle)
         
-        tableViewForInstruction.width = UIScreen.mainScreen().bounds.size.width - 40
-        tableViewForInstruction.height = 250
-        tableViewForInstruction.left = UIScreen.mainScreen().bounds.size.width/2 - tableViewForInstruction.width/2
-        tableViewForInstruction.top = labelForSubtitle.bottom + 50
-        tableViewForInstruction.layer.borderColor = UIColor.blackColor().CGColor
-        tableViewForInstruction.separatorStyle = UITableViewCellSeparatorStyle.None
-        tableViewForInstruction.scrollEnabled = false
-        self.view.addSubview(tableViewForInstruction)
+        imageViewForLeft = UIImageView()
+        imageViewForLeft.image = UIImage(named: "instLeft")
+        imageViewForLeft.setWidth(230)
+        imageViewForLeft.setHeight(200)
+        imageViewForLeft.setRight(UIScreen.mainScreen().bounds.size.width/2 - 40)
+        imageViewForLeft.setTop(labelForSubtitle.bottom + 100)
+        self.view.addSubview(imageViewForLeft)
+        
+        imageViewForRight = UIImageView()
+        imageViewForRight.image = UIImage(named: "instRight")
+        imageViewForRight.setWidth(270)
+        imageViewForRight.setHeight(120)
+        imageViewForRight.setLeft(UIScreen.mainScreen().bounds.size.width/2 + 40)
+        imageViewForRight.setTop(imageViewForLeft.height/2+imageViewForLeft.top - imageViewForRight.height/2)
+        self.view.addSubview(imageViewForRight)
+        
+        btnForOpenSetting = UIButton()
+        btnForOpenSetting.setTitle("Open Keyboard Setting", forState: UIControlState.Normal)
+        btnForOpenSetting.setTitleColor(UIColor.Hexcolor(0xE14210), forState: UIControlState.Normal)
+        btnForOpenSetting.titleLabel?.font = UIFont.systemFontOfSize(20)
+        btnForOpenSetting.layer.masksToBounds = true
+        btnForOpenSetting.layer.cornerRadius = 8
+        btnForOpenSetting.layer.borderColor = UIColor.Hexcolor(0xE14210).CGColor
+        btnForOpenSetting.layer.borderWidth = 2
+        btnForOpenSetting.setWidth(250)
+        btnForOpenSetting.setHeight(50)
+        btnForOpenSetting.setLeft(UIScreen.mainScreen().bounds.size.width/2 - btnForOpenSetting.width/2)
+        btnForOpenSetting.setTop(UIScreen.mainScreen().bounds.size.height - 150)
+        btnForOpenSetting.autoresizingMask = [.FlexibleLeftMargin, .FlexibleRightMargin, .FlexibleTopMargin]
+        self.view.addSubview(btnForOpenSetting)
+        btnForOpenSetting.addTarget(self, action: #selector(buttonForSetting), forControlEvents: UIControlEvents.TouchUpInside)
         
         btnForAlreadyDone = UIButton()
         btnForAlreadyDone.setTitle("Already Done This?", forState: UIControlState.Normal)
-        btnForAlreadyDone.setTitleColor(Hexcolor(0x4C4CFF), forState: UIControlState.Normal)
-        btnForAlreadyDone.titleLabel?.font = UIFont.systemFontOfSize(13)
+        btnForAlreadyDone.setTitleColor(UIColor.Hexcolor(0x4C4CFF), forState: UIControlState.Normal)
+        btnForAlreadyDone.setTitleColor(UIColor.Hexcolor(0xE2FCFF), forState: UIControlState.Highlighted)
+        btnForAlreadyDone.titleLabel?.font = UIFont.systemFontOfSize(20)
         btnForAlreadyDone.sizeToFit()
-        btnForAlreadyDone.left = UIScreen.mainScreen().bounds.size.width/2 - btnForAlreadyDone.width/2
-        btnForAlreadyDone.top = UIScreen.mainScreen().bounds.size.height - 50
+        btnForAlreadyDone.setLeft(UIScreen.mainScreen().bounds.size.width/2 - btnForAlreadyDone.width/2)
+        btnForAlreadyDone.setTop(UIScreen.mainScreen().bounds.size.height - 50)
+        btnForAlreadyDone.autoresizingMask = [.FlexibleLeftMargin, .FlexibleRightMargin, .FlexibleTopMargin]
         self.view.addSubview(btnForAlreadyDone)
         btnForAlreadyDone.addTarget(self, action: #selector(buttonTapped), forControlEvents: UIControlEvents.TouchUpInside)
     }
     
     func buttonTapped(sender:UIButton!) {
-        let myView = (self.storyboard?.instantiateViewControllerWithIdentifier("main"))! as UIViewController
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.window?.rootViewController = myView
+        let viewController : SwitchKeyboardViewController
+        viewController = SwitchKeyboardViewController()
+        self.presentViewController(viewController, animated: false, completion: nil)
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1;
+    func buttonForSetting(sender: UIButton!) {
+        let keyboardSettingsURL = NSURL(string: "prefs:root=General&path=Keyboard/KEYBOARDS")
+        UIApplication.sharedApplication().openURL(keyboardSettingsURL!)
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return instructionSet.count;
+    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+        <#code#>
     }
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 30;
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell : InstrPageTableViewCell = InstrPageTableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "cell")
-        if (indexPath.row < instructionIcon.count) {
-            cell.imageViewForIcon.image = instructionIcon[indexPath.row]
-        }
-        cell.labelForInstruction.text = instructionSet[indexPath.row]
-        
-        return cell;
-    }
+
 }

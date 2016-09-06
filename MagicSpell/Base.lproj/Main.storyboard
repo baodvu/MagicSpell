@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test your keyboard:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFN-Vo-b3l">
-                                <rect key="frame" x="20" y="72" width="151" height="21"/>
+                                <rect key="frame" x="20" y="72" width="151" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -56,7 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1100" y="321"/>
+            <point key="canvasLocation" x="1716" y="329"/>
         </scene>
         <!--Instr Page View Controller-->
         <scene sceneID="Ins-5l-WYq">
@@ -72,12 +72,33 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="Xeh-We-gHK" kind="presentation" id="giB-Ys-oXe"/>
+                        <segue destination="ws2-tZ-ORH" kind="presentation" id="YSg-PU-YB8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S4e-gr-9ee" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-447" y="327"/>
+            <point key="canvasLocation" x="-871" y="321"/>
+        </scene>
+        <!--Switch Keyboard View Controller-->
+        <scene sceneID="ija-ee-E5U">
+            <objects>
+                <viewController id="ws2-tZ-ORH" customClass="SwitchKeyboardViewController" customModule="MagicSpell" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Aw-IU-HcD"/>
+                        <viewControllerLayoutGuide type="bottom" id="vLN-rv-Fmc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ImC-yC-AkO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="Xeh-We-gHK" kind="presentation" id="Pog-5c-dRc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J2x-PK-Ips" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54" y="321"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="t4j-55-xYt">
@@ -95,7 +116,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Er7-9a-7nZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="288" y="321"/>
+            <point key="canvasLocation" x="912" y="321"/>
         </scene>
     </scenes>
 </document>
