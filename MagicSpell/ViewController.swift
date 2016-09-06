@@ -31,6 +31,8 @@ class ViewController: UIViewController {
     @IBAction func clearText() {
         testTextView.text = ""
     }
+    
+   
 
 }
 
