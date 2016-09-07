@@ -21,7 +21,6 @@
                 <outlet property="rightThumbFingerButton" destination="IcH-KO-fdJ" id="pLm-dB-GUa"/>
                 <outlet property="settingsOverlay" destination="eFW-X3-lx2" id="pou-0o-zAD"/>
                 <outlet property="settingsSlideIn" destination="XlW-aR-HPd" id="pxf-OX-kCv"/>
-                <outlet property="visibilitySwitch" destination="QD2-Ft-Djd" id="muK-v7-DoC"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -360,12 +359,6 @@
                         <action selector="openSettings" destination="-1" eventType="touchUpInside" id="hr1-lj-umu"/>
                     </connections>
                 </button>
-                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QD2-Ft-Djd">
-                    <rect key="frame" x="12" y="285" width="51" height="31"/>
-                    <connections>
-                        <action selector="toggleVisibility:" destination="-1" eventType="valueChanged" id="THQ-Jg-Oge"/>
-                    </connections>
-                </switch>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otQ-vQ-Oct">
                     <rect key="frame" x="72" y="272" width="92" height="56"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -571,12 +564,10 @@
                 <constraint firstItem="gGS-Cw-XuK" firstAttribute="height" secondItem="SVi-6P-CaR" secondAttribute="height" id="so0-bE-mlb"/>
                 <constraint firstItem="z7X-72-3cc" firstAttribute="leading" secondItem="ZwD-GV-kaU" secondAttribute="trailing" constant="8" id="t6Y-LP-Vh4"/>
                 <constraint firstItem="F3K-OF-cJy" firstAttribute="leading" secondItem="z7X-72-3cc" secondAttribute="trailing" constant="8" id="u3R-TD-dlR"/>
-                <constraint firstItem="QD2-Ft-Djd" firstAttribute="centerY" secondItem="otQ-vQ-Oct" secondAttribute="centerY" id="vfP-3B-IyS"/>
                 <constraint firstItem="WaV-Jo-uR1" firstAttribute="width" secondItem="uBV-fi-Mfj" secondAttribute="width" id="xUy-iR-l35"/>
                 <constraint firstItem="IcH-KO-fdJ" firstAttribute="leading" secondItem="hYx-yL-eK4" secondAttribute="trailing" constant="8" symbolic="YES" id="xhR-uX-Q51"/>
                 <constraint firstItem="sPk-1i-epP" firstAttribute="leading" secondItem="IcH-KO-fdJ" secondAttribute="trailing" constant="8" symbolic="YES" id="xzL-Fi-gJB"/>
                 <constraint firstItem="cDU-Sg-5uW" firstAttribute="height" secondItem="hYx-yL-eK4" secondAttribute="height" multiplier="0.3" id="yXP-4w-yna"/>
-                <constraint firstItem="QD2-Ft-Djd" firstAttribute="centerX" secondItem="cDU-Sg-5uW" secondAttribute="centerX" id="zAq-jb-88O"/>
                 <constraint firstItem="IcH-KO-fdJ" firstAttribute="height" secondItem="hYx-yL-eK4" secondAttribute="height" id="zIp-Vd-guQ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

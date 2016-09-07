@@ -14,7 +14,6 @@ class KeyboardViewController: UIInputViewController {
     @IBOutlet weak var rightPinkyFingerButton: UIButton!
     @IBOutlet weak var rightThumbFingerButton: UIButton!
     
-    @IBOutlet weak var visibilitySwitch: UISwitch!
     @IBOutlet weak var keyboardSizeStepper: UIStepper!
     @IBOutlet weak var settingsOverlay: UIView!
     @IBOutlet weak var settingsSlideIn: UIView!
@@ -128,10 +127,6 @@ class KeyboardViewController: UIInputViewController {
     }
     
     @IBAction func touchDownFinger(sender: UIButton) {
-        if visibilitySwitch.on {
-            sender.backgroundColor = pressedButtonColor
-        }
-        
         let finger = buttonToFinger[sender]!
         fingersPressed.insert(finger)
 
@@ -152,23 +147,7 @@ class KeyboardViewController: UIInputViewController {
     }
     
     @IBAction func touchUpFinger(sender: UIButton) {
-        if visibilitySwitch.on {
-            sender.backgroundColor = normalButtonColor
-        }
-        
         fingersPressed.removeAll()
-    }
-    
-    @IBAction func toggleVisibility(sender: UISwitch) {
-        if sender.on {
-            for key in buttonToFinger.keys {
-                key.backgroundColor = normalButtonColor
-            }
-        } else {
-            for key in buttonToFinger.keys {
-                key.backgroundColor = transparentButtonColor
-            }
-        }
     }
     
     @IBAction func openSettings() {
