@@ -44,6 +44,7 @@ class MainViewController: UIViewController {
         textView.autoresizingMask = [.FlexibleLeftMargin, .FlexibleRightMargin, .FlexibleBottomMargin, .FlexibleTopMargin, .FlexibleWidth]
         self.view.addSubview(textView)
         
+        
         btnForClear = UIButton()
         btnForClear.setTitle("Clear", forState: UIControlState.Normal)
         btnForClear.setTitleColor(UIColor.Hexcolor(0x4C4CFF), forState: UIControlState.Normal)

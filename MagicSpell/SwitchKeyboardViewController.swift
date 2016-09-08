@@ -33,7 +33,7 @@ class SwitchKeyboardViewController: UIViewController {
         labelForTitle = UILabel()
         labelForTitle.text = "Hold  To Switch to MagicSpell Keyboard"
         labelForTitle.textColor = UIColor.Hexcolor(0x4A4A4A)
-        labelForTitle.font = UIFont.systemFontOfSize(36)
+        labelForTitle.font = UIFont.systemFontOfSize(28)
         labelForTitle.sizeToFit()
         labelForTitle.setLeft(UIScreen.mainScreen().bounds.size.width/2 - labelForTitle.width/2)
         labelForTitle.setTop(50)
@@ -42,9 +42,9 @@ class SwitchKeyboardViewController: UIViewController {
         
         imageViewForInstruction = UIImageView()
         imageViewForInstruction.image = UIImage(named: "switchKeyboard")
-        imageViewForInstruction.setWidth(351)
-        imageViewForInstruction.setHeight(290)
-        imageViewForInstruction.setTop(labelForTitle.bottom + 100)
+        imageViewForInstruction.setWidth(300)
+        imageViewForInstruction.setHeight(250)
+        imageViewForInstruction.setTop(labelForTitle.bottom + 30)
         imageViewForInstruction.setLeft(UIScreen.mainScreen().bounds.size.width/2 - imageViewForInstruction.width/2)
         imageViewForInstruction.autoresizingMask = [.FlexibleLeftMargin, .FlexibleRightMargin, .FlexibleBottomMargin, .FlexibleTopMargin]
         self.view.addSubview(imageViewForInstruction)
