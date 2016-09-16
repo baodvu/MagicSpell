@@ -14,9 +14,9 @@ class InstrPageViewController: UIViewController{
     var labelForTitle : UILabel!
     var labelForSubtitle : UILabel!
     var btnForAlreadyDone : UIButton!
-    var imageViewForLeft : UIImageView!
-    var imageViewForRight : UIImageView!
+    var imageAnimation : UIImageView!
     var btnForOpenSetting : UIButton!
+    var imageArray = [UIImage(named: "install_01")!, UIImage(named: "install_02")!, UIImage(named: "install_03")!];
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,22 +54,18 @@ class InstrPageViewController: UIViewController{
         labelForSubtitle.autoresizingMask = [.FlexibleLeftMargin, .FlexibleRightMargin]
         self.view.addSubview(labelForSubtitle)
         
-        imageViewForLeft = UIImageView()
-        imageViewForLeft.image = UIImage(named: "instLeft")
-        imageViewForLeft.setWidth(230)
-        imageViewForLeft.setHeight(200)
-        imageViewForLeft.setRight(UIScreen.mainScreen().bounds.size.width/2 - 40)
-        imageViewForLeft.setTop(labelForSubtitle.bottom + 100)
-        self.view.addSubview(imageViewForLeft)
-        
-        imageViewForRight = UIImageView()
-        imageViewForRight.image = UIImage(named: "instRight")
-        imageViewForRight.setWidth(270)
-        imageViewForRight.setHeight(120)
-        imageViewForRight.setLeft(UIScreen.mainScreen().bounds.size.width/2 + 40)
-        imageViewForRight.setTop(imageViewForLeft.height/2+imageViewForLeft.top - imageViewForRight.height/2)
-        self.view.addSubview(imageViewForRight)
-        
+        imageAnimation = UIImageView()
+        imageAnimation.animationImages = imageArray
+        imageAnimation.animationDuration = 4
+        imageAnimation.animationRepeatCount = 0
+        imageAnimation.startAnimating()
+        imageAnimation.setWidth(300)
+        imageAnimation.setHeight(300)
+        imageAnimation.setLeft(UIScreen.mainScreen().bounds.size.width/2 - imageAnimation.width/2)
+        imageAnimation.autoresizingMask = [.FlexibleLeftMargin, .FlexibleRightMargin]
+        imageAnimation.setTop(labelForSubtitle.bottom + 80)
+        self.view.addSubview(imageAnimation)
+
         btnForOpenSetting = UIButton()
         btnForOpenSetting.setTitle("Open Keyboard Setting", forState: UIControlState.Normal)
         btnForOpenSetting.setTitleColor(UIColor.Hexcolor(0xE14210), forState: UIControlState.Normal)
