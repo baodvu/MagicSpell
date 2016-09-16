@@ -14,7 +14,9 @@ class KeyboardViewController: UIInputViewController {
     @IBOutlet weak var rightPinkyFingerButton: UIButton!
     @IBOutlet weak var rightThumbFingerButton: UIButton!
     
-    @IBOutlet weak var visibilitySwitch: UISwitch!
+    @IBOutlet weak var keyboardSizeStepper: UIStepper!
+    @IBOutlet weak var settingsOverlay: UIView!
+    @IBOutlet weak var settingsSlideIn: UIView!
     
     var customInterface: UIView!
     var proxy: UITextDocumentProxy {
@@ -24,7 +26,7 @@ class KeyboardViewController: UIInputViewController {
     var buttonToFinger = [UIButton: Finger]()
     
     var heightConstraint: NSLayoutConstraint!
-    let keyboardHeight:CGFloat = 400
+    var keyboardHeight:CGFloat = 400
     
     let normalButtonColor = UIColor.init(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.75)
     let pressedButtonColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.75)
@@ -65,6 +67,10 @@ class KeyboardViewController: UIInputViewController {
         for key in buttonToFinger.keys {
             key.backgroundColor = normalButtonColor
         }
+        
+        // Set up Settings Slide-in
+        keyboardSizeStepper.maximumValue = 4
+        keyboardSizeStepper.value = 2
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -121,10 +127,6 @@ class KeyboardViewController: UIInputViewController {
     }
     
     @IBAction func touchDownFinger(sender: UIButton) {
-        if visibilitySwitch.on {
-            sender.backgroundColor = pressedButtonColor
-        }
-        
         let finger = buttonToFinger[sender]!
         fingersPressed.insert(finger)
 
@@ -145,22 +147,30 @@ class KeyboardViewController: UIInputViewController {
     }
     
     @IBAction func touchUpFinger(sender: UIButton) {
-        if visibilitySwitch.on {
-            sender.backgroundColor = normalButtonColor
-        }
-        
         fingersPressed.removeAll()
     }
     
-    @IBAction func toggleVisibility(sender: UISwitch) {
-        if sender.on {
-            for key in buttonToFinger.keys {
-                key.backgroundColor = normalButtonColor
-            }
-        } else {
-            for key in buttonToFinger.keys {
-                key.backgroundColor = transparentButtonColor
-            }
+    @IBAction func openSettings() {
+        settingsSlideIn.center.x += self.settingsSlideIn.frame.width
+        settingsOverlay.backgroundColor = settingsOverlay.backgroundColor?.colorWithAlphaComponent(0)
+        settingsOverlay.hidden = false
+        UIView.animateWithDuration(0.4) {
+            self.settingsSlideIn.center.x -= self.settingsSlideIn.frame.width
+            self.settingsOverlay.backgroundColor = self.settingsOverlay.backgroundColor?.colorWithAlphaComponent(0.25)
         }
+    }
+    
+    @IBAction func closeSettings() {
+        UIView.animateWithDuration(0.4, animations: {
+            self.settingsSlideIn.center.x += self.settingsSlideIn.frame.width
+            self.settingsOverlay.backgroundColor = self.settingsOverlay.backgroundColor?.colorWithAlphaComponent(0)
+            }) {(_) -> Void in
+                self.settingsOverlay.hidden = true
+                self.settingsSlideIn.center.x -= self.settingsSlideIn.frame.width}
+    }
+
+    @IBAction func changeSize() {
+        keyboardHeight = CGFloat(320 + keyboardSizeStepper.value * 30)
+        setUpHeightConstraint()
     }
 }
