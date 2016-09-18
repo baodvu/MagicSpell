@@ -14,6 +14,7 @@ class SwitchKeyboardViewController: UIViewController {
     var imageViewForInstruction : UIImageView!
     var textFieldForInput : UITextField!
     var btnForStart : UIButton!
+    var imageArray = [UIImage(named: "switch_01")!, UIImage(named: "switch_02")!, UIImage(named: "switch_03")!];
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +34,7 @@ class SwitchKeyboardViewController: UIViewController {
         labelForTitle = UILabel()
         labelForTitle.text = "Hold  To Switch to MagicSpell Keyboard"
         labelForTitle.textColor = UIColor.Hexcolor(0x4A4A4A)
-        labelForTitle.font = UIFont.systemFontOfSize(36)
+        labelForTitle.font = UIFont.systemFontOfSize(28)
         labelForTitle.sizeToFit()
         labelForTitle.setLeft(UIScreen.mainScreen().bounds.size.width/2 - labelForTitle.width/2)
         labelForTitle.setTop(50)
@@ -41,12 +42,15 @@ class SwitchKeyboardViewController: UIViewController {
         self.view.addSubview(labelForTitle)
         
         imageViewForInstruction = UIImageView()
-        imageViewForInstruction.image = UIImage(named: "switchKeyboard")
-        imageViewForInstruction.setWidth(351)
-        imageViewForInstruction.setHeight(290)
-        imageViewForInstruction.setTop(labelForTitle.bottom + 100)
+        imageViewForInstruction.animationImages = imageArray
+        imageViewForInstruction.animationDuration = 4
+        imageViewForInstruction.animationRepeatCount = 0
+        imageViewForInstruction.startAnimating()
+        imageViewForInstruction.setWidth(300)
+        imageViewForInstruction.setHeight(250)
         imageViewForInstruction.setLeft(UIScreen.mainScreen().bounds.size.width/2 - imageViewForInstruction.width/2)
-        imageViewForInstruction.autoresizingMask = [.FlexibleLeftMargin, .FlexibleRightMargin, .FlexibleBottomMargin, .FlexibleTopMargin]
+        imageViewForInstruction.autoresizingMask = [.FlexibleLeftMargin, .FlexibleRightMargin]
+        imageViewForInstruction.setTop(labelForTitle.bottom + 50)
         self.view.addSubview(imageViewForInstruction)
         
         btnForStart = UIButton()
