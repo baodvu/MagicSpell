@@ -81,32 +81,13 @@
                         <action selector="didTapComma" destination="-1" eventType="touchUpInside" id="xZR-yf-l9L"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IcH-KO-fdJ" userLabel="Right Thumb">
-                    <rect key="frame" x="570" y="204" width="188" height="188"/>
-                    <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="IcH-KO-fdJ" secondAttribute="height" multiplier="1:1" id="MQF-iM-CDw"/>
-                    </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="5"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                            <integer key="value" value="1"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                            <color key="value" red="0.3880890052" green="0.3880890052" blue="0.3880890052" alpha="1" colorSpace="calibratedRGB"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="touchDownFinger:" destination="-1" eventType="touchDown" id="cC5-Tk-1la"/>
-                        <action selector="touchUpFinger:" destination="-1" eventType="touchUpOutside" id="Vg2-cj-L5C"/>
-                        <action selector="touchUpFinger:" destination="-1" eventType="touchUpInside" id="wU8-PA-aMz"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGS-Cw-XuK" userLabel="Left Pinky">
                     <rect key="frame" x="60" y="72" width="94" height="141"/>
                     <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="5"/>
@@ -124,32 +105,13 @@
                         <action selector="touchUpFinger:" destination="-1" eventType="touchUpInside" id="VwL-Nh-daR"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBV-fi-Mfj" userLabel="Left Index">
-                    <rect key="frame" x="366" y="40" width="94" height="141"/>
-                    <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="uBV-fi-Mfj" secondAttribute="height" multiplier="2:3" id="MEc-SO-jIG"/>
-                    </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="5"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                            <integer key="value" value="1"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                            <color key="value" red="0.3880890052" green="0.3880890052" blue="0.3880890052" alpha="1" colorSpace="calibratedRGB"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="touchDownFinger:" destination="-1" eventType="touchDown" id="0yR-5r-hOL"/>
-                        <action selector="touchUpFinger:" destination="-1" eventType="touchUpOutside" id="qci-5T-SsG"/>
-                        <action selector="touchUpFinger:" destination="-1" eventType="touchUpInside" id="tKu-In-F8K"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVi-6P-CaR" userLabel="Left Ring">
                     <rect key="frame" x="162" y="24" width="94" height="141"/>
                     <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="5"/>
@@ -167,9 +129,13 @@
                         <action selector="touchUpFinger:" destination="-1" eventType="touchUpOutside" id="vP1-KY-fF1"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WaV-Jo-uR1" userLabel="Right Index">
-                    <rect key="frame" x="570" y="40" width="94" height="141"/>
-                    <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQX-3I-tth" userLabel="Left Middle">
+                    <rect key="frame" x="264" y="8" width="94" height="141"/>
+                    <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="5"/>
@@ -182,14 +148,21 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="touchDownFinger:" destination="-1" eventType="touchDown" id="xYT-9Y-yfy"/>
-                        <action selector="touchUpFinger:" destination="-1" eventType="touchUpInside" id="PRG-A6-gZq"/>
-                        <action selector="touchUpFinger:" destination="-1" eventType="touchUpOutside" id="ukB-ZS-bCp"/>
+                        <action selector="touchDownFinger:" destination="-1" eventType="touchDown" id="iYJ-AX-0h0"/>
+                        <action selector="touchUpFinger:" destination="-1" eventType="touchUpOutside" id="9cL-IV-aLv"/>
+                        <action selector="touchUpFinger:" destination="-1" eventType="touchUpInside" id="WuJ-rL-FBT"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZwD-GV-kaU" userLabel="Right Middle">
-                    <rect key="frame" x="672" y="8" width="94" height="141"/>
-                    <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBV-fi-Mfj" userLabel="Left Index">
+                    <rect key="frame" x="366" y="40" width="94" height="141"/>
+                    <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="uBV-fi-Mfj" secondAttribute="height" multiplier="2:3" id="MEc-SO-jIG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="5"/>
@@ -202,14 +175,69 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="touchDownFinger:" destination="-1" eventType="touchDown" id="CjP-DW-dqr"/>
-                        <action selector="touchUpFinger:" destination="-1" eventType="touchUpOutside" id="iY8-xZ-eAG"/>
-                        <action selector="touchUpFinger:" destination="-1" eventType="touchUpInside" id="zL0-SR-JrC"/>
+                        <action selector="touchDownFinger:" destination="-1" eventType="touchDown" id="0yR-5r-hOL"/>
+                        <action selector="touchUpFinger:" destination="-1" eventType="touchUpOutside" id="qci-5T-SsG"/>
+                        <action selector="touchUpFinger:" destination="-1" eventType="touchUpInside" id="tKu-In-F8K"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9c-ZP-Eno" userLabel="Left Thumb">
+                    <rect key="frame" x="272" y="204" width="188" height="188"/>
+                    <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="x9c-ZP-Eno" secondAttribute="height" multiplier="1:1" id="Ixm-9t-ayH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                            <color key="value" red="0.3880890052" green="0.3880890052" blue="0.3880890052" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="touchDownFinger:" destination="-1" eventType="touchDown" id="laq-CK-zju"/>
+                        <action selector="touchUpFinger:" destination="-1" eventType="touchUpInside" id="Bwx-iK-Lgf"/>
+                        <action selector="touchUpFinger:" destination="-1" eventType="touchUpOutside" id="uQd-xT-xsF"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3K-OF-cJy" userLabel="Right Pinky">
+                    <rect key="frame" x="876" y="72" width="94" height="141"/>
+                    <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                            <color key="value" red="0.3880890052" green="0.3880890052" blue="0.3880890052" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="touchDownFinger:" destination="-1" eventType="touchDown" id="zPx-jh-bOP"/>
+                        <action selector="touchUpFinger:" destination="-1" eventType="touchUpOutside" id="BDT-tf-wTf"/>
+                        <action selector="touchUpFinger:" destination="-1" eventType="touchUpInside" id="URa-TN-YF0"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7X-72-3cc" userLabel="Right Ring">
                     <rect key="frame" x="774" y="24" width="94" height="141"/>
                     <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="5"/>
@@ -227,9 +255,13 @@
                         <action selector="touchUpFinger:" destination="-1" eventType="touchUpInside" id="rEn-TM-ybB"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3K-OF-cJy" userLabel="Right Pinky">
-                    <rect key="frame" x="876" y="72" width="94" height="141"/>
-                    <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZwD-GV-kaU" userLabel="Right Middle">
+                    <rect key="frame" x="672" y="8" width="94" height="141"/>
+                    <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="5"/>
@@ -242,9 +274,60 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="touchDownFinger:" destination="-1" eventType="touchDown" id="zPx-jh-bOP"/>
-                        <action selector="touchUpFinger:" destination="-1" eventType="touchUpOutside" id="BDT-tf-wTf"/>
-                        <action selector="touchUpFinger:" destination="-1" eventType="touchUpInside" id="URa-TN-YF0"/>
+                        <action selector="touchDownFinger:" destination="-1" eventType="touchDown" id="CjP-DW-dqr"/>
+                        <action selector="touchUpFinger:" destination="-1" eventType="touchUpOutside" id="iY8-xZ-eAG"/>
+                        <action selector="touchUpFinger:" destination="-1" eventType="touchUpInside" id="zL0-SR-JrC"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WaV-Jo-uR1" userLabel="Right Index">
+                    <rect key="frame" x="570" y="40" width="94" height="141"/>
+                    <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                            <color key="value" red="0.3880890052" green="0.3880890052" blue="0.3880890052" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="touchDownFinger:" destination="-1" eventType="touchDown" id="xYT-9Y-yfy"/>
+                        <action selector="touchUpFinger:" destination="-1" eventType="touchUpInside" id="PRG-A6-gZq"/>
+                        <action selector="touchUpFinger:" destination="-1" eventType="touchUpOutside" id="ukB-ZS-bCp"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IcH-KO-fdJ" userLabel="Right Thumb">
+                    <rect key="frame" x="570" y="204" width="188" height="188"/>
+                    <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="IcH-KO-fdJ" secondAttribute="height" multiplier="1:1" id="MQF-iM-CDw"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                            <color key="value" red="0.3880890052" green="0.3880890052" blue="0.3880890052" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="touchDownFinger:" destination="-1" eventType="touchDown" id="cC5-Tk-1la"/>
+                        <action selector="touchUpFinger:" destination="-1" eventType="touchUpOutside" id="Vg2-cj-L5C"/>
+                        <action selector="touchUpFinger:" destination="-1" eventType="touchUpInside" id="wU8-PA-aMz"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4w-V3-D7D" userLabel="Backspace">
@@ -289,49 +372,6 @@
                     <rect key="frame" x="468" y="8" width="94" height="188"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9c-ZP-Eno">
-                    <rect key="frame" x="272" y="204" width="188" height="188"/>
-                    <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="x9c-ZP-Eno" secondAttribute="height" multiplier="1:1" id="Ixm-9t-ayH"/>
-                    </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="5"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                            <integer key="value" value="1"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                            <color key="value" red="0.3880890052" green="0.3880890052" blue="0.3880890052" alpha="1" colorSpace="calibratedRGB"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="touchDownFinger:" destination="-1" eventType="touchDown" id="laq-CK-zju"/>
-                        <action selector="touchUpFinger:" destination="-1" eventType="touchUpInside" id="Bwx-iK-Lgf"/>
-                        <action selector="touchUpFinger:" destination="-1" eventType="touchUpOutside" id="uQd-xT-xsF"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQX-3I-tth">
-                    <rect key="frame" x="264" y="8" width="94" height="141"/>
-                    <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="5"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                            <integer key="value" value="1"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                            <color key="value" red="0.3880890052" green="0.3880890052" blue="0.3880890052" alpha="1" colorSpace="calibratedRGB"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="touchDownFinger:" destination="-1" eventType="touchDown" id="iYJ-AX-0h0"/>
-                        <action selector="touchUpFinger:" destination="-1" eventType="touchUpOutside" id="9cL-IV-aLv"/>
-                        <action selector="touchUpFinger:" destination="-1" eventType="touchUpInside" id="WuJ-rL-FBT"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asc-HS-Cz2" userLabel="Settings">
                     <rect key="frame" x="966" y="336" width="56" height="56"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>

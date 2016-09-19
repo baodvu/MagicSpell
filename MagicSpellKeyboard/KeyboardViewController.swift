@@ -68,6 +68,8 @@ class KeyboardViewController: UIInputViewController {
             key.backgroundColor = normalButtonColor
         }
         
+        updateKeyLabels()
+        
         // Set up Settings Slide-in
         keyboardSizeStepper.maximumValue = 4
         keyboardSizeStepper.value = 2
@@ -97,6 +99,15 @@ class KeyboardViewController: UIInputViewController {
             view.addConstraint(heightConstraint)
         } else {
             heightConstraint.constant = customHeight
+        }
+    }
+    
+    func updateKeyLabels() {
+        for key in buttonToFinger.keys {
+            let finger = buttonToFinger[key]
+            var potentialFingerCombination = fingersPressed
+            potentialFingerCombination.insert(finger!)
+            key.setTitle(LetterMapping.getLetter(potentialFingerCombination), forState: .Normal)
         }
     }
     
@@ -144,10 +155,12 @@ class KeyboardViewController: UIInputViewController {
             }
         default: fingersPressed.removeAll()
         }
+        updateKeyLabels()
     }
     
     @IBAction func touchUpFinger(sender: UIButton) {
         fingersPressed.removeAll()
+        updateKeyLabels()
     }
     
     @IBAction func openSettings() {
