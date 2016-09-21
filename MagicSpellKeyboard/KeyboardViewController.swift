@@ -143,7 +143,7 @@ class KeyboardViewController: UIInputViewController {
     
     @IBAction func didTapShift(sender: UIButton) {
         if !shiftKeyActive {
-            sender.setTitle("SHIFT ⬆", forState: .Normal)
+            sender.setTitle("SHIFT ⇧", forState: .Normal)
             shiftKeyActive = true
         } else {
             sender.setTitle("shift ⇧", forState: .Normal)
