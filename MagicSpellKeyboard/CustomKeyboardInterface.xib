@@ -78,7 +78,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="didTapComma" destination="-1" eventType="touchUpInside" id="xZR-yf-l9L"/>
+                        <action selector="didTapShift:" destination="-1" eventType="touchUpInside" id="STz-iN-WZN"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGS-Cw-XuK" userLabel="Left Pinky">

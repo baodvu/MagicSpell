@@ -28,6 +28,8 @@ class KeyboardViewController: UIInputViewController {
     var heightConstraint: NSLayoutConstraint!
     var keyboardHeight:CGFloat = 400
     
+    var shiftKeyActive = false
+    
     let normalButtonColor = UIColor.init(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.75)
     let pressedButtonColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.75)
     let transparentButtonColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 0)
@@ -107,7 +109,11 @@ class KeyboardViewController: UIInputViewController {
             let finger = buttonToFinger[key]
             var potentialFingerCombination = fingersPressed
             potentialFingerCombination.insert(finger!)
-            key.setTitle(LetterMapping.getLetter(potentialFingerCombination), forState: .Normal)
+            if shiftKeyActive {
+                key.setTitle(LetterMapping.getUpperLetter(potentialFingerCombination), forState: .Normal)
+            } else {
+                key.setTitle(LetterMapping.getLowerLetter(potentialFingerCombination), forState: .Normal)
+            }
         }
     }
     
@@ -137,21 +143,49 @@ class KeyboardViewController: UIInputViewController {
         proxy.insertText("\n")
     }
     
+    @IBAction func didTapShift(sender: UIButton) {
+        if !shiftKeyActive {
+            sender.setTitle("SHIFT ⇧", forState: .Normal)
+            shiftKeyActive = true
+        } else {
+            sender.setTitle("shift ⇧", forState: .Normal)
+            shiftKeyActive = false
+        }
+        updateKeyLabels()
+    }
+    
+    
     @IBAction func touchDownFinger(sender: UIButton) {
         let finger = buttonToFinger[sender]!
         fingersPressed.insert(finger)
 
         switch fingersPressed.count {
         case 1:
-            if let letter = LetterMapping.getLetter(fingersPressed) {
-                proxy.insertText(letter)
+            if shiftKeyActive {
+                if let letter = LetterMapping.getUpperLetter(fingersPressed) {
+                    proxy.insertText(letter)
+                }
+            } else {
+                if let letter = LetterMapping.getLowerLetter(fingersPressed) {
+                    proxy.insertText(letter)
+                }
             }
         case 2:
-            if let letter = LetterMapping.getLetter(fingersPressed) {
-                proxy.deleteBackward()
-                proxy.insertText(letter)
+            if shiftKeyActive {
+                if let letter = LetterMapping.getUpperLetter(fingersPressed) {
+                    proxy.deleteBackward()
+                    proxy.insertText(letter)
+                } else {
+                    fingersPressed.removeAll()
+                }
             } else {
-                fingersPressed.removeAll()
+                if let letter = LetterMapping.getLowerLetter(fingersPressed) {
+                    proxy.deleteBackward()
+                    proxy.insertText(letter)
+                } else {
+                    fingersPressed.removeAll()
+                }
+
             }
         default: fingersPressed.removeAll()
         }
