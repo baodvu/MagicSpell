@@ -14,6 +14,9 @@ class KeyboardViewController: UIInputViewController {
     @IBOutlet weak var rightPinkyFingerButton: UIButton!
     @IBOutlet weak var rightThumbFingerButton: UIButton!
     
+    
+    @IBOutlet weak var shiftButton: UIButton!
+    
     @IBOutlet weak var keyboardSizeStepper: UIStepper!
     @IBOutlet weak var settingsOverlay: UIView!
     @IBOutlet weak var settingsSlideIn: UIView!
@@ -188,12 +191,15 @@ class KeyboardViewController: UIInputViewController {
 
             }
         default: fingersPressed.removeAll()
+
         }
         updateKeyLabels()
     }
     
     @IBAction func touchUpFinger(sender: UIButton) {
         fingersPressed.removeAll()
+        shiftButton.setTitle("shift ⇧", forState: .Normal)
+        shiftKeyActive = false
         updateKeyLabels()
     }
     

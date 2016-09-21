@@ -21,6 +21,7 @@
                 <outlet property="rightThumbFingerButton" destination="IcH-KO-fdJ" id="pLm-dB-GUa"/>
                 <outlet property="settingsOverlay" destination="eFW-X3-lx2" id="pou-0o-zAD"/>
                 <outlet property="settingsSlideIn" destination="XlW-aR-HPd" id="pxf-OX-kCv"/>
+                <outlet property="shiftButton" destination="IuG-Az-cUa" id="WMi-yW-cgk"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
