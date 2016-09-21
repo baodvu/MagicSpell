@@ -14,7 +14,6 @@ class KeyboardViewController: UIInputViewController {
     @IBOutlet weak var rightPinkyFingerButton: UIButton!
     @IBOutlet weak var rightThumbFingerButton: UIButton!
     
-    
     @IBOutlet weak var shiftButton: UIButton!
     
     @IBOutlet weak var keyboardSizeStepper: UIStepper!
@@ -112,11 +111,7 @@ class KeyboardViewController: UIInputViewController {
             let finger = buttonToFinger[key]
             var potentialFingerCombination = fingersPressed
             potentialFingerCombination.insert(finger!)
-            if shiftKeyActive {
-                key.setTitle(LetterMapping.getUpperLetter(potentialFingerCombination), forState: .Normal)
-            } else {
-                key.setTitle(LetterMapping.getLowerLetter(potentialFingerCombination), forState: .Normal)
-            }
+            key.setTitle(LetterMapping.getLetter(potentialFingerCombination, isUpperCase: shiftKeyActive), forState: .Normal)
         }
     }
     
@@ -161,37 +156,15 @@ class KeyboardViewController: UIInputViewController {
     @IBAction func touchDownFinger(sender: UIButton) {
         let finger = buttonToFinger[sender]!
         fingersPressed.insert(finger)
-
-        switch fingersPressed.count {
-        case 1:
-            if shiftKeyActive {
-                if let letter = LetterMapping.getUpperLetter(fingersPressed) {
-                    proxy.insertText(letter)
-                }
-            } else {
-                if let letter = LetterMapping.getLowerLetter(fingersPressed) {
-                    proxy.insertText(letter)
-                }
+        if let letter = LetterMapping.getLetter(fingersPressed, isUpperCase: shiftKeyActive) {
+            if fingersPressed.count == 2 {
+                proxy.deleteBackward()
+                fingersPressed.removeAll()
             }
-        case 2:
-            if shiftKeyActive {
-                if let letter = LetterMapping.getUpperLetter(fingersPressed) {
-                    proxy.deleteBackward()
-                    proxy.insertText(letter)
-                } else {
-                    fingersPressed.removeAll()
-                }
-            } else {
-                if let letter = LetterMapping.getLowerLetter(fingersPressed) {
-                    proxy.deleteBackward()
-                    proxy.insertText(letter)
-                } else {
-                    fingersPressed.removeAll()
-                }
-
-            }
-        default: fingersPressed.removeAll()
-
+            proxy.insertText(letter)
+        } else {
+            // Invalid combination of keys, clear the stack
+            fingersPressed.removeAll()
         }
         updateKeyLabels()
     }
