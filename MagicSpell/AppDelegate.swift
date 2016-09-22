@@ -31,6 +31,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+        if (isKeyboardActivated("edu.gatech.cc.bvu.MagicSpell")) {
+            print("hello")
+            if self.window!.rootViewController is InstrPageViewController {
+                let viewController : SwitchKeyboardViewController = SwitchKeyboardViewController()
+                self.window!.rootViewController!.presentViewController(viewController, animated: false, completion: nil)
+            }
+        } else {
+            print("not added")
+        }
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
@@ -41,6 +50,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func isKeyboardActivated(bundleId: String) -> Bool {
+        let array = NSUserDefaults.standardUserDefaults().objectForKey("AppleKeyboards") as! [String]
+        for keyboard in array {
+            if keyboard.containsString(bundleId) {
+                return true
+            }
+        }
+        return false
+    }
 }
 
