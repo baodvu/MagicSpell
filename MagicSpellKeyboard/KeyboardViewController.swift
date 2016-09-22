@@ -111,7 +111,7 @@ class KeyboardViewController: UIInputViewController {
             let finger = buttonToFinger[key]
             var potentialFingerCombination = fingersPressed
             potentialFingerCombination.insert(finger!)
-            key.setTitle(LetterMapping.getLetter(potentialFingerCombination), forState: .Normal)
+            key.setTitle(LetterMapping.getLetter(potentialFingerCombination, isUpperCase: shiftKeyActive), forState: .Normal)
         }
     }
     
