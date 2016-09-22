@@ -1,6 +1,6 @@
 class LetterMapping {
 
-    private static let map: [Set<Finger>: String] = [
+    private static let lowerCaseMap: [Set<Finger>: String] = [
         [Finger(side: .Left, name: .Pinky)] : "a",
         [Finger(side: .Left, name: .Ring)] : "b",
         [Finger(side: .Left, name: .Middle)] : "c",
@@ -32,8 +32,14 @@ class LetterMapping {
         [Finger(side: .Left, name: .Middle), Finger(side: .Left, name: .Index)] : "y",
         [Finger(side: .Right, name: .Index), Finger(side: .Right, name: .Middle)] : "z",
     ]
-    
-    static func getLetter(fingers: Set<Finger>) -> String? {
-        return map[fingers]
+
+    static func getLetter(fingers: Set<Finger>, isUpperCase: Bool) -> String? {
+        let val = lowerCaseMap[fingers]
+        if isUpperCase {
+            if let lowercase = val {
+                return lowercase.uppercaseString
+            }
+        }
+        return val
     }
 }

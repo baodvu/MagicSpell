@@ -14,6 +14,8 @@ class KeyboardViewController: UIInputViewController {
     @IBOutlet weak var rightPinkyFingerButton: UIButton!
     @IBOutlet weak var rightThumbFingerButton: UIButton!
     
+    @IBOutlet weak var shiftButton: UIButton!
+    
     @IBOutlet weak var keyboardSizeStepper: UIStepper!
     @IBOutlet weak var settingsOverlay: UIView!
     @IBOutlet weak var settingsSlideIn: UIView!
@@ -27,6 +29,8 @@ class KeyboardViewController: UIInputViewController {
     
     var heightConstraint: NSLayoutConstraint!
     var keyboardHeight:CGFloat = 400
+    
+    var shiftKeyActive = false
     
     let normalButtonColor = UIColor.init(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.75)
     let pressedButtonColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.75)
@@ -107,7 +111,7 @@ class KeyboardViewController: UIInputViewController {
             let finger = buttonToFinger[key]
             var potentialFingerCombination = fingersPressed
             potentialFingerCombination.insert(finger!)
-            key.setTitle(LetterMapping.getLetter(potentialFingerCombination), forState: .Normal)
+            key.setTitle(LetterMapping.getLetter(potentialFingerCombination, isUpperCase: shiftKeyActive), forState: .Normal)
         }
     }
     
@@ -137,29 +141,38 @@ class KeyboardViewController: UIInputViewController {
         proxy.insertText("\n")
     }
     
+    @IBAction func didTapShift(sender: UIButton) {
+        if !shiftKeyActive {
+            sender.setTitle("SHIFT ⇧", forState: .Normal)
+            shiftKeyActive = true
+        } else {
+            sender.setTitle("shift ⇧", forState: .Normal)
+            shiftKeyActive = false
+        }
+        updateKeyLabels()
+    }
+    
+    
     @IBAction func touchDownFinger(sender: UIButton) {
         let finger = buttonToFinger[sender]!
         fingersPressed.insert(finger)
-
-        switch fingersPressed.count {
-        case 1:
-            if let letter = LetterMapping.getLetter(fingersPressed) {
-                proxy.insertText(letter)
-            }
-        case 2:
-            if let letter = LetterMapping.getLetter(fingersPressed) {
+        if let letter = LetterMapping.getLetter(fingersPressed, isUpperCase: shiftKeyActive) {
+            if fingersPressed.count == 2 {
                 proxy.deleteBackward()
-                proxy.insertText(letter)
-            } else {
                 fingersPressed.removeAll()
             }
-        default: fingersPressed.removeAll()
+            proxy.insertText(letter)
+        } else {
+            // Invalid combination of keys, clear the stack
+            fingersPressed.removeAll()
         }
         updateKeyLabels()
     }
     
     @IBAction func touchUpFinger(sender: UIButton) {
         fingersPressed.removeAll()
+        shiftButton.setTitle("shift ⇧", forState: .Normal)
+        shiftKeyActive = false
         updateKeyLabels()
     }
     
