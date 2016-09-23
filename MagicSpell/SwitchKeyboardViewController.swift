@@ -10,16 +10,32 @@ import Foundation
 import UIKit
 
 class SwitchKeyboardViewController: UIViewController {
-    var labelForTitle : UILabel!
-    var imageViewForInstruction : UIImageView!
-    var textFieldForInput : UITextField!
-    var btnForStart : UIButton!
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet weak var textField: UITextField!
     
+    @IBOutlet var btnForStart: UIButton!
+    var imageArray = [UIImage(named: "switch_01")!, UIImage(named: "switch_02")!, UIImage(named: "switch_03")!, UIImage(named: "switch_04")!];
+    var inputMode : String!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        btnForStart.layer.borderColor = UIColor.appleBlue().CGColor
+        btnForStart.layer.cornerRadius = 4
+        btnForStart.layer.borderWidth = 1
+        
+        imageView.animationImages = imageArray
+        imageView.animationRepeatCount = 0
+        imageView.animationDuration = 6
+        imageView.startAnimating()
+        
+        textField.becomeFirstResponder()
+        //        textField.hidden = true
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
-        makeViews()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(isKeyboardSwitched), name: UITextInputCurrentInputModeDidChangeNotification, object: nil)
+        inputMode = textField.textInputMode?.primaryLanguage
     }
     
     override func didReceiveMemoryWarning() {
@@ -27,58 +43,29 @@ class SwitchKeyboardViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func makeViews() {
-        self.view.backgroundColor = UIColor.whiteColor()
-        
-        labelForTitle = UILabel()
-        labelForTitle.text = "Hold  To Switch to MagicSpell Keyboard"
-        labelForTitle.textColor = UIColor.Hexcolor(0x4A4A4A)
-        labelForTitle.font = UIFont.systemFontOfSize(36)
-        labelForTitle.sizeToFit()
-        labelForTitle.setLeft(UIScreen.mainScreen().bounds.size.width/2 - labelForTitle.width/2)
-        labelForTitle.setTop(50)
-        labelForTitle.autoresizingMask = [.FlexibleLeftMargin, .FlexibleRightMargin, .FlexibleBottomMargin, .FlexibleTopMargin]
-        self.view.addSubview(labelForTitle)
-        
-        imageViewForInstruction = UIImageView()
-        imageViewForInstruction.image = UIImage(named: "switchKeyboard")
-        imageViewForInstruction.setWidth(351)
-        imageViewForInstruction.setHeight(290)
-        imageViewForInstruction.setTop(labelForTitle.bottom + 100)
-        imageViewForInstruction.setLeft(UIScreen.mainScreen().bounds.size.width/2 - imageViewForInstruction.width/2)
-        imageViewForInstruction.autoresizingMask = [.FlexibleLeftMargin, .FlexibleRightMargin, .FlexibleBottomMargin, .FlexibleTopMargin]
-        self.view.addSubview(imageViewForInstruction)
-        
-        btnForStart = UIButton()
-        btnForStart.setTitle("Let's Start", forState: UIControlState.Normal)
-        btnForStart.setTitleColor(UIColor.Hexcolor(0xE14210), forState: UIControlState.Normal)
-        btnForStart.titleLabel?.font = UIFont.systemFontOfSize(20)
-        btnForStart.layer.masksToBounds = true
-        btnForStart.layer.cornerRadius = 8
-        btnForStart.layer.borderColor = UIColor.Hexcolor(0xE14210).CGColor
-        btnForStart.layer.borderWidth = 2
-        btnForStart.setWidth(150)
-        btnForStart.setHeight(40)
-        btnForStart.setLeft(UIScreen.mainScreen().bounds.size.width/2 - btnForStart.width/2)
-        btnForStart.setTop(UIScreen.mainScreen().bounds.size.height - 150)
-        btnForStart.autoresizingMask = [.FlexibleLeftMargin, .FlexibleRightMargin, .FlexibleTopMargin]
-        self.view.addSubview(btnForStart)
-        btnForStart.addTarget(self, action: #selector(buttonTapped), forControlEvents: UIControlEvents.TouchUpInside)
-        
-        textFieldForInput = UITextField()
-        textFieldForInput.hidden = true;
-        self.view.addSubview(textFieldForInput)
-        
-        textFieldForInput.becomeFirstResponder()
-    }
-    
-    func buttonTapped(sender: UIButton!) {
-        let viewController : MainViewController
-        viewController = MainViewController()
-        self.presentViewController(viewController, animated: false, completion: nil)
+    @IBAction func startTapped(sender: AnyObject) {
+        let myView = (self.storyboard?.instantiateViewControllerWithIdentifier("main"))! as UIViewController
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.window?.rootViewController = myView
     }
     
     func dismissKeyboard(gesture: UITapGestureRecognizer) {
-        textFieldForInput.resignFirstResponder()
+        textField.endEditing(true)
+    }
+    
+    
+    func isKeyboardSwitched() {
+       
+        
+//        let key = textField.textInputMode?.primaryLanguage
+//        print(key.count)
+//        if (key == ) {
+//            let myView = (self.storyboard?.instantiateViewControllerWithIdentifier("main"))! as UIViewController
+//            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//            appDelegate.window?.rootViewController = myView
+//
+//        }
+
+        
     }
 }

@@ -19,7 +19,6 @@
 		63F7B1391C5F091600D491B5 /* MagicSpellKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 63F7B1321C5F091600D491B5 /* MagicSpellKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		63F7B13F1C5F0A0400D491B5 /* CustomKeyboardInterface.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63F7B13E1C5F0A0400D491B5 /* CustomKeyboardInterface.xib */; };
 		AC343DBC1D7F40F90094B9D0 /* SwitchKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC343DBB1D7F40F90094B9D0 /* SwitchKeyboardViewController.swift */; };
-		AC343DBE1D7F5E700094B9D0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC343DBD1D7F5E700094B9D0 /* MainViewController.swift */; };
 		ACE4E9581D774AB300BE2C31 /* InstrPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4E9571D774AB300BE2C31 /* InstrPageViewController.swift */; };
 		ACE4E95A1D77BE6F00BE2C31 /* UIViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4E9591D77BE6F00BE2C31 /* UIViewHelper.swift */; };
 		F37FF0E31D94D3040007718F /* KeyboardActivation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37FF0E21D94D3040007718F /* KeyboardActivation.swift */; };
@@ -76,7 +75,6 @@
 		63F7B1361C5F091600D491B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63F7B13E1C5F0A0400D491B5 /* CustomKeyboardInterface.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomKeyboardInterface.xib; sourceTree = "<group>"; };
 		AC343DBB1D7F40F90094B9D0 /* SwitchKeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchKeyboardViewController.swift; sourceTree = "<group>"; };
-		AC343DBD1D7F5E700094B9D0 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		ACE4E9571D774AB300BE2C31 /* InstrPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrPageViewController.swift; sourceTree = "<group>"; };
 		ACE4E9591D77BE6F00BE2C31 /* UIViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewHelper.swift; sourceTree = "<group>"; };
 		F37FF0E21D94D3040007718F /* KeyboardActivation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardActivation.swift; sourceTree = "<group>"; };
@@ -142,7 +140,6 @@
 				ACE4E9571D774AB300BE2C31 /* InstrPageViewController.swift */,
 				ACE4E9591D77BE6F00BE2C31 /* UIViewHelper.swift */,
 				AC343DBB1D7F40F90094B9D0 /* SwitchKeyboardViewController.swift */,
-				AC343DBD1D7F5E700094B9D0 /* MainViewController.swift */,
 				F37FF0E21D94D3040007718F /* KeyboardActivation.swift */,
 			);
 			path = MagicSpell;
@@ -315,7 +312,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC343DBE1D7F5E700094B9D0 /* MainViewController.swift in Sources */,
 				ACE4E9581D774AB300BE2C31 /* InstrPageViewController.swift in Sources */,
 				63F7B10F1C5F052A00D491B5 /* ViewController.swift in Sources */,
 				63F7B10D1C5F052A00D491B5 /* AppDelegate.swift in Sources */,

@@ -14,6 +14,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        testTextView.layer.borderColor = UIColor.blackColor().CGColor
+        testTextView.layer.borderWidth = 1
+        testTextView.layer.cornerRadius = 5
         
         testTextView.becomeFirstResponder()
         
