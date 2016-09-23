@@ -171,8 +171,6 @@ class KeyboardViewController: UIInputViewController {
     
     @IBAction func touchUpFinger(sender: UIButton) {
         fingersPressed.removeAll()
-        shiftButton.setTitle("shift ⇧", forState: .Normal)
-        shiftKeyActive = false
         updateKeyLabels()
     }
     
