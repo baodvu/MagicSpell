@@ -89,4 +89,8 @@ extension UIColor {
     static func HexcolorA(hexValue : NSInteger, alphaValue: CGFloat) -> UIColor {
         return UIColor.init(red : ((CGFloat)((hexValue & 0xFF0000) >> 16)) / 255.0, green : ((CGFloat)((hexValue & 0xFF00) >> 8)) / 255.0, blue : ((CGFloat)(hexValue & 0xFF)) / 255.0, alpha : (alphaValue))
     }
+
+    static func appleBlue() -> UIColor {
+        return UIColor.init(colorLiteralRed: 14.0/255, green: 122.0/255, blue: 254.0/255, alpha: 1.0)
+    }
 }
