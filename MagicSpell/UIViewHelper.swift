@@ -1,5 +1,5 @@
 //
-//  UIView+Layout.swift
+//  UIViewHelper.swift
 //  MagicSpell
 //
 //  Created by Lingyi Li on 8/31/16.
@@ -14,9 +14,6 @@ extension UIView {
     
     var width:      CGFloat { return self.frame.size.width }
     var height:     CGFloat { return self.frame.size.height }
-//    var size:       CGSize  { return self.frame.size}
-    
-//    var origin:     CGPoint { return self.frame.origin }
     var x:          CGFloat { return self.frame.origin.x }
     var y:          CGFloat { return self.frame.origin.y }
     var centerX:    CGFloat { return self.center.x }
@@ -36,16 +33,6 @@ extension UIView {
     {
         self.frame.size.height = height
     }
-    
-//    func setSize(size:CGSize)
-//    {
-//        self.frame.size = size
-//    }
-    
-//    func setOrigin(point:CGPoint)
-//    {
-//        self.frame.origin = point
-//    }
     
     func setX(x:CGFloat) //only change the origin x
     {
@@ -101,5 +88,9 @@ extension UIColor {
     
     static func HexcolorA(hexValue : NSInteger, alphaValue: CGFloat) -> UIColor {
         return UIColor.init(red : ((CGFloat)((hexValue & 0xFF0000) >> 16)) / 255.0, green : ((CGFloat)((hexValue & 0xFF00) >> 8)) / 255.0, blue : ((CGFloat)(hexValue & 0xFF)) / 255.0, alpha : (alphaValue))
+    }
+
+    static func appleBlue() -> UIColor {
+        return UIColor.init(colorLiteralRed: 14.0/255, green: 122.0/255, blue: 254.0/255, alpha: 1.0)
     }
 }

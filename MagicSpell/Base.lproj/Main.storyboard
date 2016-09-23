@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hXa-GB-92a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hXa-GB-92a">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -69,9 +69,186 @@
                     <view key="view" contentMode="scaleToFill" id="vzB-M0-DIs">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Install the keyboard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2D-5C-SfY">
+                                <rect key="frame" x="146" y="45" width="309.5" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kw0-bW-AZw" userLabel="Step view">
+                                <rect key="frame" x="125" y="212" width="350" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open Keyboard Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ng5-wY-k50">
+                                        <rect key="frame" x="65" y="20" width="187" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hba-J0-taY">
+                                        <rect key="frame" x="20" y="15" width="30" height="30"/>
+                                        <color key="backgroundColor" white="0.6220703125" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="AUn-KC-oVR"/>
+                                            <constraint firstAttribute="width" constant="30" id="hkq-Kd-kPg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Ng5-wY-k50" firstAttribute="leading" secondItem="hba-J0-taY" secondAttribute="trailing" constant="15" id="0BW-de-KZu"/>
+                                    <constraint firstItem="hba-J0-taY" firstAttribute="centerY" secondItem="kw0-bW-AZw" secondAttribute="centerY" id="ERh-bs-AsL"/>
+                                    <constraint firstAttribute="width" constant="350" id="Etg-zt-0WK"/>
+                                    <constraint firstItem="Ng5-wY-k50" firstAttribute="centerY" secondItem="hba-J0-taY" secondAttribute="centerY" id="PAB-xv-kHE"/>
+                                    <constraint firstAttribute="height" constant="60" id="YMt-H8-H0o"/>
+                                    <constraint firstItem="hba-J0-taY" firstAttribute="leading" secondItem="kw0-bW-AZw" secondAttribute="leading" constant="20" id="uM5-CK-EwL"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zxB-B1-p24" userLabel="Step view">
+                                <rect key="frame" x="125" y="280" width="350" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add new keyboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBD-5Z-1d8">
+                                        <rect key="frame" x="65" y="20" width="143" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JO4-fW-Krm">
+                                        <rect key="frame" x="20" y="15" width="30" height="30"/>
+                                        <color key="backgroundColor" white="0.6220703125" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="EUo-ZJ-uKP"/>
+                                            <constraint firstAttribute="width" constant="30" id="neK-JV-AAR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="gBD-5Z-1d8" firstAttribute="leading" secondItem="JO4-fW-Krm" secondAttribute="trailing" constant="15" id="3DU-kA-64M"/>
+                                    <constraint firstItem="gBD-5Z-1d8" firstAttribute="centerY" secondItem="JO4-fW-Krm" secondAttribute="centerY" id="A25-IF-SrR"/>
+                                    <constraint firstAttribute="width" constant="350" id="I2A-Td-2s1"/>
+                                    <constraint firstAttribute="height" constant="60" id="IbR-3z-638"/>
+                                    <constraint firstItem="JO4-fW-Krm" firstAttribute="centerY" secondItem="zxB-B1-p24" secondAttribute="centerY" id="KrK-l3-dfk"/>
+                                    <constraint firstItem="JO4-fW-Krm" firstAttribute="leading" secondItem="zxB-B1-p24" secondAttribute="leading" constant="20" id="nn1-Hp-JvZ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MdQ-Ig-Y6O" userLabel="Step view">
+                                <rect key="frame" x="125" y="348" width="350" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MagicSpell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8c-ak-7Mp">
+                                        <rect key="frame" x="65" y="20" width="84" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4h-Hw-28D">
+                                        <rect key="frame" x="20" y="15" width="30" height="30"/>
+                                        <color key="backgroundColor" white="0.6220703125" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Vgw-LM-E5k"/>
+                                            <constraint firstAttribute="width" constant="30" id="kE1-8M-Y50"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="F4h-Hw-28D" firstAttribute="centerY" secondItem="MdQ-Ig-Y6O" secondAttribute="centerY" id="Fgr-du-aKh"/>
+                                    <constraint firstItem="e8c-ak-7Mp" firstAttribute="leading" secondItem="F4h-Hw-28D" secondAttribute="trailing" constant="15" id="JYF-J9-hl7"/>
+                                    <constraint firstAttribute="width" constant="350" id="O5f-d2-yNm"/>
+                                    <constraint firstItem="F4h-Hw-28D" firstAttribute="leading" secondItem="MdQ-Ig-Y6O" secondAttribute="leading" constant="20" id="gZb-oE-ZKD"/>
+                                    <constraint firstItem="e8c-ak-7Mp" firstAttribute="centerY" secondItem="F4h-Hw-28D" secondAttribute="centerY" id="iio-y3-BT7"/>
+                                    <constraint firstAttribute="height" constant="60" id="pdT-B7-KuI"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qO-MT-UHD">
+                                <rect key="frame" x="104" y="163" width="393" height="41"/>
+                                <string key="text">Please install the keyboard by following these steps
+and come back here when done</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgF-c9-Aq8">
+                                <rect key="frame" x="197" y="483" width="207" height="38"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
+                                <state key="normal" title="Open Keyboard Settings"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="openKeyboardSettings:" destination="hXa-GB-92a" eventType="touchUpInside" id="C1X-yg-Q5c"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kw0-bW-AZw" firstAttribute="centerX" secondItem="vzB-M0-DIs" secondAttribute="centerX" id="35k-ru-DR8"/>
+                            <constraint firstItem="zyS-ea-soA" firstAttribute="top" secondItem="rgF-c9-Aq8" secondAttribute="bottom" constant="8" symbolic="YES" id="98Z-7T-Gkm"/>
+                            <constraint firstItem="rgF-c9-Aq8" firstAttribute="top" secondItem="MdQ-Ig-Y6O" secondAttribute="bottom" constant="75" id="9ME-Hv-k0T"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kw0-bW-AZw" secondAttribute="trailing" id="FK6-YX-2gd"/>
+                            <constraint firstItem="kw0-bW-AZw" firstAttribute="leading" secondItem="vzB-M0-DIs" secondAttribute="leadingMargin" id="IuR-pC-p75"/>
+                            <constraint firstItem="kw0-bW-AZw" firstAttribute="top" secondItem="7qO-MT-UHD" secondAttribute="bottom" constant="8" symbolic="YES" id="Nrx-xM-oqJ"/>
+                            <constraint firstItem="MdQ-Ig-Y6O" firstAttribute="top" secondItem="zxB-B1-p24" secondAttribute="bottom" constant="8" id="PeQ-bQ-woA"/>
+                            <constraint firstItem="zxB-B1-p24" firstAttribute="centerX" secondItem="vzB-M0-DIs" secondAttribute="centerX" id="WZd-0N-SxR"/>
+                            <constraint firstItem="t2D-5C-SfY" firstAttribute="leading" secondItem="kw0-bW-AZw" secondAttribute="trailing" id="awa-Um-OVg"/>
+                            <constraint firstItem="rgF-c9-Aq8" firstAttribute="centerY" secondItem="vzB-M0-DIs" secondAttribute="centerY" id="cAi-oN-Vzh"/>
+                            <constraint firstItem="kw0-bW-AZw" firstAttribute="top" secondItem="7qO-MT-UHD" secondAttribute="top" id="eav-3l-4aU"/>
+                            <constraint firstItem="t2D-5C-SfY" firstAttribute="centerX" secondItem="vzB-M0-DIs" secondAttribute="centerX" id="fTJ-Z5-yYf"/>
+                            <constraint firstItem="t2D-5C-SfY" firstAttribute="top" secondItem="6eh-uj-5j6" secondAttribute="bottom" constant="25" id="g6g-eT-uzG"/>
+                            <constraint firstItem="7qO-MT-UHD" firstAttribute="top" secondItem="t2D-5C-SfY" secondAttribute="bottom" constant="75" id="hBf-eR-Gtx"/>
+                            <constraint firstItem="rgF-c9-Aq8" firstAttribute="centerX" secondItem="vzB-M0-DIs" secondAttribute="centerX" id="hf3-cw-s1l"/>
+                            <constraint firstItem="MdQ-Ig-Y6O" firstAttribute="centerX" secondItem="vzB-M0-DIs" secondAttribute="centerX" id="oQp-gz-AEB"/>
+                            <constraint firstItem="zxB-B1-p24" firstAttribute="top" secondItem="kw0-bW-AZw" secondAttribute="bottom" constant="8" id="qwr-HJ-uUy"/>
+                            <constraint firstItem="7qO-MT-UHD" firstAttribute="centerX" secondItem="t2D-5C-SfY" secondAttribute="centerX" id="vrz-se-jDo"/>
+                            <constraint firstItem="kw0-bW-AZw" firstAttribute="top" secondItem="t2D-5C-SfY" secondAttribute="bottom" constant="20" id="whp-6h-eUs"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="awa-Um-OVg"/>
+                                <exclude reference="FK6-YX-2gd"/>
+                                <exclude reference="IuR-pC-p75"/>
+                                <exclude reference="eav-3l-4aU"/>
+                                <exclude reference="whp-6h-eUs"/>
+                                <exclude reference="cAi-oN-Vzh"/>
+                                <exclude reference="98Z-7T-Gkm"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="openKeyboardSettingsButton" destination="rgF-c9-Aq8" id="seb-7U-NZ8"/>
                         <segue destination="ws2-tZ-ORH" kind="presentation" identifier="SegueForAddKeyboard" id="YSg-PU-YB8"/>
                     </connections>
                 </viewController>
