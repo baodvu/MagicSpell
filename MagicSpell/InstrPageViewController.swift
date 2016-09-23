@@ -23,7 +23,9 @@ class InstrPageViewController: UIViewController{
     
     override func viewDidAppear(animated: Bool) {
         if KeyboardActivation.isKeyboardActivated() {
-            self.presentViewController(InstrPageViewController.nextScreen, animated: false, completion: nil)
+            let myView = (self.storyboard?.instantiateViewControllerWithIdentifier("switchKeyboard"))! as UIViewController
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            appDelegate.window?.rootViewController = myView
         }
     }
     
