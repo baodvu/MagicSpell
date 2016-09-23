@@ -49,18 +49,14 @@ class SwitchKeyboardViewController: UIViewController {
         appDelegate.window?.rootViewController = myView
     }
     
-    func buttonTapped(sender: UIButton!) {
-        let viewController : MainViewController
-        viewController = MainViewController()
-        self.presentViewController(viewController, animated: false, completion: nil)
-    }
-    
     func dismissKeyboard(gesture: UITapGestureRecognizer) {
         textField.endEditing(true)
     }
     
+    
     func isKeyboardSwitched() {
        
+        
 //        let key = textField.textInputMode?.primaryLanguage
 //        print(key.count)
 //        if (key == ) {
