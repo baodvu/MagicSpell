@@ -9,7 +9,7 @@
 import Foundation
 
 class KeyboardActivation {
-    static let bundleId = "edu.gatech.cc.bvu.MagicSpell"
+    static let bundleId = "edu.gatech.cc.pentagon.MagicSpell"
     
     static func isKeyboardActivated() -> Bool {
         let array = NSUserDefaults.standardUserDefaults().objectForKey("AppleKeyboards") as! [String]
