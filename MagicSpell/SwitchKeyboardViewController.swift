@@ -15,6 +15,8 @@ class SwitchKeyboardViewController: UIViewController {
     var textFieldForInput : UITextField!
     var btnForStart : UIButton!
     
+    var imageArray = [UIImage(named: "switch_01")!, UIImage(named: "switch_02")!, UIImage(named: "switch_03")!, UIImage(named: "switch_04")!, UIImage(named: "switch_05")!];
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
@@ -41,9 +43,12 @@ class SwitchKeyboardViewController: UIViewController {
         self.view.addSubview(labelForTitle)
         
         imageViewForInstruction = UIImageView()
-        imageViewForInstruction.image = UIImage(named: "switchKeyboard")
-        imageViewForInstruction.setWidth(351)
-        imageViewForInstruction.setHeight(290)
+        imageViewForInstruction.animationImages = imageArray
+        imageViewForInstruction.animationRepeatCount = 0
+        imageViewForInstruction.animationDuration = 6
+        imageViewForInstruction.startAnimating()
+        imageViewForInstruction.setWidth(400)
+        imageViewForInstruction.setHeight(340)
         imageViewForInstruction.setTop(labelForTitle.bottom + 100)
         imageViewForInstruction.setLeft(UIScreen.mainScreen().bounds.size.width/2 - imageViewForInstruction.width/2)
         imageViewForInstruction.autoresizingMask = [.FlexibleLeftMargin, .FlexibleRightMargin, .FlexibleBottomMargin, .FlexibleTopMargin]
