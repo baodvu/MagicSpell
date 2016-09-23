@@ -23,7 +23,7 @@ class InstrPageViewController: UIViewController{
     
     override func viewDidAppear(animated: Bool) {
         if KeyboardActivation.isKeyboardActivated() {
-//            self.presentViewController(InstrPageViewController.nextScreen, animated: false, completion: nil)
+            self.presentViewController(InstrPageViewController.nextScreen, animated: false, completion: nil)
         }
     }
     
