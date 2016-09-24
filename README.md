@@ -8,5 +8,8 @@ In a nutshell, it is a keyboard with only 10 input keys, allowing you to complet
 
 You must either use a single or a combination of keys to type a letter. The keys-to-letter mappings conform to the MagicSpell key association system, an intuitive system designed to promote fast learning for beginners.
 
+## Key chording system
+![Alt text](keyboard.png "Key chording system")
+
 ## License
 MIT licensed.
