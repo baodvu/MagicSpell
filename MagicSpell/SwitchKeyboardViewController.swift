@@ -10,33 +10,32 @@ import Foundation
 import UIKit
 
 class SwitchKeyboardViewController: UIViewController {
+    
     @IBOutlet var imageView: UIImageView!
     @IBOutlet weak var textField: UITextField!
-    
-    @IBOutlet var btnForStart: UIButton!
+    @IBOutlet weak var btnForStart: UIButton!
     var imageArray = [UIImage(named: "switch_01")!, UIImage(named: "switch_02")!, UIImage(named: "switch_03")!, UIImage(named: "switch_04")!];
-    var inputMode : String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         btnForStart.layer.borderColor = UIColor.appleBlue().CGColor
         btnForStart.layer.cornerRadius = 4
         btnForStart.layer.borderWidth = 1
-        
+
         imageView.animationImages = imageArray
         imageView.animationRepeatCount = 0
         imageView.animationDuration = 6
         imageView.startAnimating()
-        
+
         textField.becomeFirstResponder()
-        //        textField.hidden = true
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(isKeyboardSwitched), name: UITextInputCurrentInputModeDidChangeNotification, object: nil)
-        inputMode = textField.textInputMode?.primaryLanguage
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
