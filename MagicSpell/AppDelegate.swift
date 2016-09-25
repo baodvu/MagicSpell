@@ -34,7 +34,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         if KeyboardActivation.isKeyboardActivated() {
             if self.window!.rootViewController is InstrPageViewController {
-                self.window!.rootViewController!.presentViewController(InstrPageViewController.nextScreen, animated: false, completion: nil)
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewControllerWithIdentifier("switchKeyboard") as UIViewController
+                let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                appDelegate.window?.rootViewController = vc
             }
         }
     }

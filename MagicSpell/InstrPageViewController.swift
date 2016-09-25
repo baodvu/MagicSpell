@@ -33,4 +33,5 @@ class InstrPageViewController: UIViewController{
         let keyboardSettingsURL = NSURL(string: "prefs:root=General&path=Keyboard/KEYBOARDS")
         UIApplication.sharedApplication().openURL(keyboardSettingsURL!)
     }
+    
 }
