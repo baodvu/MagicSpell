@@ -30,7 +30,11 @@ class KeyboardViewController: UIInputViewController {
     var heightConstraint: NSLayoutConstraint!
     var keyboardHeight:CGFloat = 400
     
-    var shiftKeyActive = false
+    var shiftKeyActive = false {
+        didSet {
+            shiftButton.setImage(UIImage(named: shiftKeyActive ? "Shift - filled" : "Shift"), forState: .Normal)
+        }
+    }
     
     let normalButtonColor = UIColor.init(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.75)
     let pressedButtonColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.75)
@@ -116,6 +120,11 @@ class KeyboardViewController: UIInputViewController {
         }
     }
     
+    func toggleShift() {
+        shiftButton.setImage(UIImage(named: shiftKeyActive ? "Shift" : "Shift - filled"), forState: .Normal)
+        shiftKeyActive = !shiftKeyActive
+    }
+    
     // MARK: Key actions
     
     @IBAction func didTapNextKeyboard() {
@@ -143,13 +152,7 @@ class KeyboardViewController: UIInputViewController {
     }
     
     @IBAction func didTapShift(sender: UIButton) {
-        if !shiftKeyActive {
-            sender.setTitle("SHIFT ⇧", forState: .Normal)
-            shiftKeyActive = true
-        } else {
-            sender.setTitle("shift ⇧", forState: .Normal)
-            shiftKeyActive = false
-        }
+        shiftKeyActive = !shiftKeyActive
         updateKeyLabels()
     }
     
@@ -172,7 +175,6 @@ class KeyboardViewController: UIInputViewController {
     
     @IBAction func touchUpFinger(sender: UIButton) {
         fingersPressed.removeAll()
-        shiftButton.setTitle("shift ⇧", forState: .Normal)
         shiftKeyActive = false
         updateKeyLabels()
     }

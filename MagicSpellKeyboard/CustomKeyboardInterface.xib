@@ -291,11 +291,11 @@
                         <action selector="touchUpFinger:" destination="-1" eventType="touchUpOutside" id="uQd-xT-xsF"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4w-V3-D7D" userLabel="Backspace">
-                    <rect key="frame" x="703.5" y="346" width="122" height="58"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4w-V3-D7D" userLabel="Delete">
+                    <rect key="frame" x="703.5" y="346" width="122.5" height="58"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <size key="titleShadowOffset" width="0.0" height="1"/>
-                    <state key="normal" title="backspace"/>
+                    <state key="normal" image="Delete"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="5"/>
@@ -323,7 +323,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPk-1i-epP" userLabel="Enter">
-                    <rect key="frame" x="833.5" y="346" width="122.5" height="58"/>
+                    <rect key="frame" x="834" y="346" width="122" height="58"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <size key="titleShadowOffset" width="0.0" height="1"/>
                     <state key="normal" title="enter"/>
@@ -337,10 +337,10 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="200" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IuG-Az-cUa" userLabel="Shift ⇧">
-                    <rect key="frame" x="74" y="346" width="79.5" height="58"/>
+                    <rect key="frame" x="74" y="346" width="79" height="58"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <size key="titleShadowOffset" width="0.0" height="1"/>
-                    <state key="normal" title="⇧"/>
+                    <state key="normal" image="Shift"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="5"/>
@@ -570,7 +570,9 @@
         </view>
     </objects>
     <resources>
+        <image name="Delete" width="30" height="30"/>
         <image name="Globe" width="25" height="25"/>
         <image name="Settings" width="25" height="25"/>
+        <image name="Shift" width="25" height="25"/>
     </resources>
 </document>
