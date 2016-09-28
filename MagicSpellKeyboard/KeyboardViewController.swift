@@ -75,6 +75,7 @@ class KeyboardViewController: UIInputViewController {
         updateKeyLabels()
         
         // Set up Settings Slide-in
+        settingsOverlay.hidden = true
         keyboardSizeStepper.maximumValue = 4
         keyboardSizeStepper.value = 2
     }
