@@ -18,7 +18,7 @@ class InstrPageViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        openKeyboardSettingsButton.layer.borderColor = UIColor.appleBlue().CGColor
+        openKeyboardSettingsButton.layer.borderColor = UIColor.darkGrayColor().CGColor
     }
     
     override func viewDidAppear(animated: Bool) {
