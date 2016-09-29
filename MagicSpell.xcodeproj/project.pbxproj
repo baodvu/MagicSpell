@@ -21,6 +21,7 @@
 		AC343DBC1D7F40F90094B9D0 /* SwitchKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC343DBB1D7F40F90094B9D0 /* SwitchKeyboardViewController.swift */; };
 		ACE4E9581D774AB300BE2C31 /* InstrPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4E9571D774AB300BE2C31 /* InstrPageViewController.swift */; };
 		ACE4E95A1D77BE6F00BE2C31 /* UIViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4E9591D77BE6F00BE2C31 /* UIViewHelper.swift */; };
+		F31ABCCC1D9C917400BBEC35 /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31ABCCB1D9C917400BBEC35 /* ColorScheme.swift */; };
 		F37FF0E31D94D3040007718F /* KeyboardActivation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37FF0E21D94D3040007718F /* KeyboardActivation.swift */; };
 		F38B91641D752D7100B6F45F /* Finger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38B91631D752D7100B6F45F /* Finger.swift */; };
 		F38B91661D75362300B6F45F /* LetterMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38B91651D75362300B6F45F /* LetterMapping.swift */; };
@@ -77,6 +78,7 @@
 		AC343DBB1D7F40F90094B9D0 /* SwitchKeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchKeyboardViewController.swift; sourceTree = "<group>"; };
 		ACE4E9571D774AB300BE2C31 /* InstrPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrPageViewController.swift; sourceTree = "<group>"; };
 		ACE4E9591D77BE6F00BE2C31 /* UIViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewHelper.swift; sourceTree = "<group>"; };
+		F31ABCCB1D9C917400BBEC35 /* ColorScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
 		F37FF0E21D94D3040007718F /* KeyboardActivation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardActivation.swift; sourceTree = "<group>"; };
 		F38B91631D752D7100B6F45F /* Finger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Finger.swift; sourceTree = "<group>"; };
 		F38B91651D75362300B6F45F /* LetterMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterMapping.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			children = (
 				F38B91631D752D7100B6F45F /* Finger.swift */,
 				F38B91651D75362300B6F45F /* LetterMapping.swift */,
+				F31ABCCB1D9C917400BBEC35 /* ColorScheme.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F31ABCCC1D9C917400BBEC35 /* ColorScheme.swift in Sources */,
 				F38B91641D752D7100B6F45F /* Finger.swift in Sources */,
 				63F7B1351C5F091600D491B5 /* KeyboardViewController.swift in Sources */,
 				F38B91661D75362300B6F45F /* LetterMapping.swift in Sources */,
