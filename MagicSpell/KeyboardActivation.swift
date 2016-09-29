@@ -12,9 +12,9 @@ class KeyboardActivation {
     static let bundleId = "edu.gatech.cc.pentagon.MagicSpell"
     
     static func isKeyboardActivated() -> Bool {
-        let array = NSUserDefaults.standardUserDefaults().objectForKey("AppleKeyboards") as! [String]
+        let array = UserDefaults.standard.object(forKey: "AppleKeyboards") as! [String]
         for keyboard in array {
-            if keyboard.containsString(bundleId) {
+            if keyboard.contains(bundleId) {
                 return true
             }
         }

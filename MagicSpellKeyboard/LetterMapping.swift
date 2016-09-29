@@ -1,43 +1,43 @@
 class LetterMapping {
 
-    private static let lowerCaseMap: [Set<Finger>: String] = [
-        [Finger(side: .Left, name: .Pinky)] : "a",
-        [Finger(side: .Left, name: .Ring)] : "b",
-        [Finger(side: .Left, name: .Middle)] : "c",
-        [Finger(side: .Left, name: .Index)] : "d",
-        [Finger(side: .Left, name: .Thumb)] : "e",
-        [Finger(side: .Right, name: .Thumb)] : "f",
-        [Finger(side: .Right, name: .Index)] : "g",
-        [Finger(side: .Right, name: .Middle)] : "h",
-        [Finger(side: .Right, name: .Ring)] : "i",
-        [Finger(side: .Right, name: .Pinky)] : "j",
+    fileprivate static let lowerCaseMap: [Set<Finger>: String] = [
+        [Finger(side: .left, name: .pinky)] : "a",
+        [Finger(side: .left, name: .ring)] : "b",
+        [Finger(side: .left, name: .middle)] : "c",
+        [Finger(side: .left, name: .index)] : "d",
+        [Finger(side: .left, name: .thumb)] : "e",
+        [Finger(side: .right, name: .thumb)] : "f",
+        [Finger(side: .right, name: .index)] : "g",
+        [Finger(side: .right, name: .middle)] : "h",
+        [Finger(side: .right, name: .ring)] : "i",
+        [Finger(side: .right, name: .pinky)] : "j",
         
-        [Finger(side: .Left, name: .Pinky), Finger(side: .Right, name: .Pinky)] : "k",
-        [Finger(side: .Left, name: .Ring), Finger(side: .Right, name: .Ring)] : "l",
-        [Finger(side: .Left, name: .Middle), Finger(side: .Right, name: .Middle)] : "m",
-        [Finger(side: .Left, name: .Index), Finger(side: .Right, name: .Index)] : "n",
-        [Finger(side: .Left, name: .Thumb), Finger(side: .Right, name: .Thumb)] : "o",
+        [Finger(side: .left, name: .pinky), Finger(side: .right, name: .pinky)] : "k",
+        [Finger(side: .left, name: .ring), Finger(side: .right, name: .ring)] : "l",
+        [Finger(side: .left, name: .middle), Finger(side: .right, name: .middle)] : "m",
+        [Finger(side: .left, name: .index), Finger(side: .right, name: .index)] : "n",
+        [Finger(side: .left, name: .thumb), Finger(side: .right, name: .thumb)] : "o",
 
-        [Finger(side: .Left, name: .Pinky), Finger(side: .Left, name: .Thumb)] : "p",
-        [Finger(side: .Left, name: .Ring), Finger(side: .Left, name: .Thumb)] : "q",
-        [Finger(side: .Left, name: .Middle), Finger(side: .Left, name: .Thumb)] : "r",
-        [Finger(side: .Left, name: .Index), Finger(side: .Left, name: .Thumb)] : "s",
+        [Finger(side: .left, name: .pinky), Finger(side: .left, name: .thumb)] : "p",
+        [Finger(side: .left, name: .ring), Finger(side: .left, name: .thumb)] : "q",
+        [Finger(side: .left, name: .middle), Finger(side: .left, name: .thumb)] : "r",
+        [Finger(side: .left, name: .index), Finger(side: .left, name: .thumb)] : "s",
         
-        [Finger(side: .Right, name: .Index), Finger(side: .Right, name: .Thumb)] : "t",
-        [Finger(side: .Right, name: .Middle), Finger(side: .Right, name: .Thumb)] : "u",
-        [Finger(side: .Right, name: .Ring), Finger(side: .Right, name: .Thumb)] : "v",
-        [Finger(side: .Right, name: .Pinky), Finger(side: .Right, name: .Thumb)] : "w",
+        [Finger(side: .right, name: .index), Finger(side: .right, name: .thumb)] : "t",
+        [Finger(side: .right, name: .middle), Finger(side: .right, name: .thumb)] : "u",
+        [Finger(side: .right, name: .ring), Finger(side: .right, name: .thumb)] : "v",
+        [Finger(side: .right, name: .pinky), Finger(side: .right, name: .thumb)] : "w",
         
-        [Finger(side: .Left, name: .Pinky), Finger(side: .Left, name: .Ring)] : "x",
-        [Finger(side: .Left, name: .Middle), Finger(side: .Left, name: .Index)] : "y",
-        [Finger(side: .Right, name: .Index), Finger(side: .Right, name: .Middle)] : "z",
+        [Finger(side: .left, name: .pinky), Finger(side: .left, name: .ring)] : "x",
+        [Finger(side: .left, name: .middle), Finger(side: .left, name: .index)] : "y",
+        [Finger(side: .right, name: .index), Finger(side: .right, name: .middle)] : "z",
     ]
 
-    static func getLetter(fingers: Set<Finger>, isUpperCase: Bool) -> String? {
+    static func getLetter(_ fingers: Set<Finger>, isUpperCase: Bool) -> String? {
         let val = lowerCaseMap[fingers]
         if isUpperCase {
             if let lowercase = val {
-                return lowercase.uppercaseString
+                return lowercase.uppercased()
             }
         }
         return val

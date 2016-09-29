@@ -19,7 +19,7 @@ class SwitchKeyboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        btnForStart.layer.borderColor = UIColor.appleBlue().CGColor
+        btnForStart.layer.borderColor = UIColor.appleBlue().cgColor
         btnForStart.layer.cornerRadius = 4
         btnForStart.layer.borderWidth = 1
 
@@ -33,7 +33,7 @@ class SwitchKeyboardViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(isKeyboardSwitched), name: UITextInputCurrentInputModeDidChangeNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(isKeyboardSwitched), name: NSNotification.Name.UITextInputCurrentInputModeDidChange, object: nil)
     }
     
     
@@ -42,13 +42,13 @@ class SwitchKeyboardViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func startTapped(sender: AnyObject) {
-        let myView = (self.storyboard?.instantiateViewControllerWithIdentifier("main"))! as UIViewController
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    @IBAction func startTapped(_ sender: AnyObject) {
+        let myView = (self.storyboard?.instantiateViewController(withIdentifier: "main"))! as UIViewController
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController = myView
     }
     
-    func dismissKeyboard(gesture: UITapGestureRecognizer) {
+    func dismissKeyboard(_ gesture: UITapGestureRecognizer) {
         textField.endEditing(true)
     }
     

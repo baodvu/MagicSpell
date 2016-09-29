@@ -3,23 +3,23 @@ import UIKit
 struct ColorScheme {
     
     var name: String
-    private var colorMap: [Finger: UIColor]
-    private var defaultColor = UIColor.lightGrayColor()
+    fileprivate var colorMap: [Finger: UIColor]
+    fileprivate var defaultColor = UIColor.lightGray
     
     // Init with one single color - every key has the same color
     init(named name: String, color: UIColor) {
         self.name = name
         colorMap = [
-            Finger(side: .Left, name: .Pinky) : color,
-            Finger(side: .Left, name: .Ring) : color,
-            Finger(side: .Left, name: .Middle) : color,
-            Finger(side: .Left, name: .Index) : color,
-            Finger(side: .Left, name: .Thumb) : color,
-            Finger(side: .Right, name: .Thumb) : color,
-            Finger(side: .Right, name: .Index) : color,
-            Finger(side: .Right, name: .Middle) : color,
-            Finger(side: .Right, name: .Ring) : color,
-            Finger(side: .Right, name: .Pinky) : color
+            Finger(side: .left, name: .pinky) : color,
+            Finger(side: .left, name: .ring) : color,
+            Finger(side: .left, name: .middle) : color,
+            Finger(side: .left, name: .index) : color,
+            Finger(side: .left, name: .thumb) : color,
+            Finger(side: .right, name: .thumb) : color,
+            Finger(side: .right, name: .index) : color,
+            Finger(side: .right, name: .middle) : color,
+            Finger(side: .right, name: .ring) : color,
+            Finger(side: .right, name: .pinky) : color
         ]
     }
     
@@ -27,34 +27,34 @@ struct ColorScheme {
     init(named name: String, color1: UIColor, color2: UIColor, color3: UIColor, color4: UIColor, color5: UIColor) {
         self.name = name
         colorMap = [
-            Finger(side: .Left, name: .Pinky) : color1,
-            Finger(side: .Left, name: .Ring) : color2,
-            Finger(side: .Left, name: .Middle) : color3,
-            Finger(side: .Left, name: .Index) : color4,
-            Finger(side: .Left, name: .Thumb) : color5,
-            Finger(side: .Right, name: .Thumb) : color5,
-            Finger(side: .Right, name: .Index) : color4,
-            Finger(side: .Right, name: .Middle) : color3,
-            Finger(side: .Right, name: .Ring) : color2,
-            Finger(side: .Right, name: .Pinky) : color1
+            Finger(side: .left, name: .pinky) : color1,
+            Finger(side: .left, name: .ring) : color2,
+            Finger(side: .left, name: .middle) : color3,
+            Finger(side: .left, name: .index) : color4,
+            Finger(side: .left, name: .thumb) : color5,
+            Finger(side: .right, name: .thumb) : color5,
+            Finger(side: .right, name: .index) : color4,
+            Finger(side: .right, name: .middle) : color3,
+            Finger(side: .right, name: .ring) : color2,
+            Finger(side: .right, name: .pinky) : color1
         ]
     }
     
-    func getColor(finger: Finger) -> UIColor {
+    func getColor(_ finger: Finger) -> UIColor {
         if let color = colorMap[finger] {
             return color
         }
         return defaultColor
     }
 
-    func getDarkerColor(finger: Finger) -> UIColor {
+    func getDarkerColor(_ finger: Finger) -> UIColor {
         return self.getColor(finger).darker(10.0)!
     }
     
     // MARK: Color schemes
     
     static func defaultMonochrome() -> ColorScheme {
-        return ColorScheme.init(named: "Monochrome", color: UIColor.lightGrayColor().lighter(15.0)!)
+        return ColorScheme.init(named: "Monochrome", color: UIColor.lightGray.lighter(15.0)!)
     }
     
     // Creator: Drew
@@ -80,15 +80,15 @@ struct ColorScheme {
 
 extension UIColor {
     
-    func lighter(percentage:CGFloat=30.0) -> UIColor? {
+    func lighter(_ percentage:CGFloat=30.0) -> UIColor? {
         return self.adjust( abs(percentage) )
     }
     
-    func darker(percentage:CGFloat=30.0) -> UIColor? {
+    func darker(_ percentage:CGFloat=30.0) -> UIColor? {
         return self.adjust( -1 * abs(percentage) )
     }
     
-    func adjust(percentage:CGFloat=30.0) -> UIColor? {
+    func adjust(_ percentage:CGFloat=30.0) -> UIColor? {
         var r:CGFloat=0, g:CGFloat=0, b:CGFloat=0, a:CGFloat=0;
         if (self.getRed(&r, green: &g, blue: &b, alpha: &a)){
             return UIColor(red: min(r + percentage/100, 1.0),

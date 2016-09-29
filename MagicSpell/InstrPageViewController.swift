@@ -18,20 +18,20 @@ class InstrPageViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        openKeyboardSettingsButton.layer.borderColor = UIColor.darkGrayColor().CGColor
+        openKeyboardSettingsButton.layer.borderColor = UIColor.darkGray.cgColor
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         if KeyboardActivation.isKeyboardActivated() {
-            let myView = (self.storyboard?.instantiateViewControllerWithIdentifier("switchKeyboard"))! as UIViewController
-            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            let myView = (self.storyboard?.instantiateViewController(withIdentifier: "switchKeyboard"))! as UIViewController
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.window?.rootViewController = myView
         }
     }
     
-    @IBAction func openKeyboardSettings(sender: UIButton) {
-        let keyboardSettingsURL = NSURL(string: "prefs:root=General&path=Keyboard/KEYBOARDS")
-        UIApplication.sharedApplication().openURL(keyboardSettingsURL!)
+    @IBAction func openKeyboardSettings(_ sender: UIButton) {
+        let keyboardSettingsURL = URL(string: "prefs:root=General&path=Keyboard/KEYBOARDS")
+        UIApplication.shared.openURL(keyboardSettingsURL!)
     }
     
 }
