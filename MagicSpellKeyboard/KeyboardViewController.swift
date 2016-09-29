@@ -53,6 +53,7 @@ class KeyboardViewController: UIInputViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        sendKeyboardNotification()
         
         view.addSubview(customInterface)
 
@@ -80,6 +81,12 @@ class KeyboardViewController: UIInputViewController {
         super.viewDidAppear(animated)
         
         setUpHeightConstraint()
+    }
+    
+    func sendKeyboardNotification() {
+        CFNotificationCenterPostNotification(CFNotificationCenterGetDarwinNotifyCenter(),
+                                             CFNotificationName.init("cc.gatech.edu.pentagon.magicspell.switched" as CFString),
+                                             nil, nil, true)
     }
     
     func setUpHeightConstraint() {
