@@ -209,11 +209,11 @@ and come back here when done</string>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="awa-Um-OVg"/>
                                 <exclude reference="FK6-YX-2gd"/>
                                 <exclude reference="IuR-pC-p75"/>
                                 <exclude reference="eav-3l-4aU"/>
                                 <exclude reference="whp-6h-eUs"/>
+                                <exclude reference="awa-Um-OVg"/>
                             </mask>
                         </variation>
                     </view>
@@ -243,22 +243,10 @@ and come back here when done</string>
                                     <constraint firstAttribute="width" constant="268" id="y2B-L9-MjP"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please hold globe icon" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lgT-He-Xbz">
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lgT-He-Xbz">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYl-Ov-SpU">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="Fek-QE-cMZ"/>
-                                    <constraint firstAttribute="width" constant="167" id="LX6-qz-mal"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
-                                <state key="normal" title="Let's Start"/>
-                                <connections>
-                                    <action selector="startTapped:" destination="ws2-tZ-ORH" eventType="touchUpInside" id="irQ-g9-fQG"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Switch to MagicSpell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRa-w0-cBa">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="RWK-dA-0Fa"/>
@@ -271,19 +259,16 @@ and come back here when done</string>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="vLN-rv-Fmc" firstAttribute="top" secondItem="LYl-Ov-SpU" secondAttribute="bottom" constant="96" id="9R6-GI-y0R"/>
-                            <constraint firstItem="IZf-RP-yVM" firstAttribute="top" secondItem="pRa-w0-cBa" secondAttribute="bottom" constant="35" id="CT5-rf-hdF"/>
+                            <constraint firstItem="IZf-RP-yVM" firstAttribute="top" secondItem="pRa-w0-cBa" secondAttribute="bottom" constant="75" id="CT5-rf-hdF"/>
                             <constraint firstItem="pRa-w0-cBa" firstAttribute="centerX" secondItem="ImC-yC-AkO" secondAttribute="centerX" id="G2q-Mp-OKh"/>
                             <constraint firstItem="pRa-w0-cBa" firstAttribute="top" secondItem="6Aw-IU-HcD" secondAttribute="bottom" constant="50" id="Nm7-fr-B8K"/>
                             <constraint firstItem="lgT-He-Xbz" firstAttribute="top" secondItem="IZf-RP-yVM" secondAttribute="bottom" constant="33" id="Vre-31-wkt"/>
                             <constraint firstItem="pRa-w0-cBa" firstAttribute="centerX" secondItem="IZf-RP-yVM" secondAttribute="centerX" id="Zdx-rh-1o7"/>
-                            <constraint firstItem="LYl-Ov-SpU" firstAttribute="centerX" secondItem="ImC-yC-AkO" secondAttribute="centerX" id="Zxe-95-yFH"/>
                             <constraint firstItem="IZf-RP-yVM" firstAttribute="centerX" secondItem="pRa-w0-cBa" secondAttribute="centerX" id="i1I-Tt-B1M"/>
                             <constraint firstItem="lgT-He-Xbz" firstAttribute="centerX" secondItem="pRa-w0-cBa" secondAttribute="centerX" id="sWc-Gc-96m"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btnForStart" destination="LYl-Ov-SpU" id="bVS-L6-AAv"/>
                         <outlet property="imageView" destination="IZf-RP-yVM" id="jmc-J9-Jbb"/>
                         <outlet property="textField" destination="lgT-He-Xbz" id="bbA-JC-L7f"/>
                         <segue destination="Xeh-We-gHK" kind="presentation" identifier="segueForSwitchKeyboard" id="Pog-5c-dRc"/>
