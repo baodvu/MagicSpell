@@ -29,9 +29,6 @@ class SwitchKeyboardViewController: UIViewController {
         let item : UITextInputAssistantItem = textField.inputAssistantItem
         item.leadingBarButtonGroups = []
         item.trailingBarButtonGroups = []
-        
-        // let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        // view.addGestureRecognizer(tapGesture)
 
         registerKeyboardSwitchingObserver()
     }
