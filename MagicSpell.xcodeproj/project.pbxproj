@@ -78,6 +78,8 @@
 		AC343DBB1D7F40F90094B9D0 /* SwitchKeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchKeyboardViewController.swift; sourceTree = "<group>"; };
 		ACE4E9571D774AB300BE2C31 /* InstrPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrPageViewController.swift; sourceTree = "<group>"; };
 		ACE4E9591D77BE6F00BE2C31 /* UIViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewHelper.swift; sourceTree = "<group>"; };
+		F30A1A2A1D9CCB3F0065C2E9 /* MagicSpell.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MagicSpell.entitlements; sourceTree = "<group>"; };
+		F30A1A2B1D9CCB440065C2E9 /* MagicSpellKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MagicSpellKeyboard.entitlements; sourceTree = "<group>"; };
 		F31ABCCB1D9C917400BBEC35 /* ColorScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
 		F37FF0E21D94D3040007718F /* KeyboardActivation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardActivation.swift; sourceTree = "<group>"; };
 		F38B91631D752D7100B6F45F /* Finger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Finger.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 		63F7B10B1C5F052A00D491B5 /* MagicSpell */ = {
 			isa = PBXGroup;
 			children = (
+				F30A1A2A1D9CCB3F0065C2E9 /* MagicSpell.entitlements */,
 				63F7B10C1C5F052A00D491B5 /* AppDelegate.swift */,
 				63F7B10E1C5F052A00D491B5 /* ViewController.swift */,
 				63F7B1101C5F052A00D491B5 /* Main.storyboard */,
@@ -159,6 +162,7 @@
 		63F7B1331C5F091600D491B5 /* MagicSpellKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				F30A1A2B1D9CCB440065C2E9 /* MagicSpellKeyboard.entitlements */,
 				F38B91621D752D1100B6F45F /* Models */,
 				63F7B1341C5F091600D491B5 /* KeyboardViewController.swift */,
 				63F7B1361C5F091600D491B5 /* Info.plist */,
@@ -249,6 +253,11 @@
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 6B5P6J522G;
 						LastSwiftMigration = 0810;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					63F7B11C1C5F052A00D491B5 = {
 						CreatedOnToolsVersion = 7.3;
@@ -259,6 +268,11 @@
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 6B5P6J522G;
 						LastSwiftMigration = 0810;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -474,6 +488,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MagicSpell/MagicSpell.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MagicSpell/Info.plist;
@@ -495,6 +510,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MagicSpell/MagicSpell.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MagicSpell/Info.plist;
@@ -536,6 +552,7 @@
 		63F7B13B1C5F091600D491B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MagicSpellKeyboard/MagicSpellKeyboard.entitlements;
 				INFOPLIST_FILE = MagicSpellKeyboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -550,6 +567,7 @@
 		63F7B13C1C5F091600D491B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MagicSpellKeyboard/MagicSpellKeyboard.entitlements;
 				INFOPLIST_FILE = MagicSpellKeyboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
