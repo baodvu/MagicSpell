@@ -36,10 +36,6 @@ class KeyboardViewController: UIInputViewController {
         }
     }
     
-    let normalButtonColor = UIColor.init(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.75)
-    let pressedButtonColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.75)
-    let transparentButtonColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 0)
-    
     var fingersPressed = Set<Finger>()
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
@@ -71,10 +67,6 @@ class KeyboardViewController: UIInputViewController {
         buttonToFinger[rightMiddleFingerButton!] = Finger(side: .Right, name: .Middle)
         buttonToFinger[rightIndexFingerButton!] = Finger(side: .Right, name: .Index)
         buttonToFinger[rightThumbFingerButton!] = Finger(side: .Right, name: .Thumb)
-        
-        for key in buttonToFinger.keys {
-            key.backgroundColor = normalButtonColor
-        }
         
         updateKeyLabels()
         
@@ -160,6 +152,8 @@ class KeyboardViewController: UIInputViewController {
     @IBAction func touchDownFinger(sender: UIButton) {
         let finger = buttonToFinger[sender]!
         fingersPressed.insert(finger)
+        
+        // Update text field
         if let letter = LetterMapping.getLetter(fingersPressed, isUpperCase: shiftKeyActive) {
             if fingersPressed.count == 2 {
                 proxy.deleteBackward()
