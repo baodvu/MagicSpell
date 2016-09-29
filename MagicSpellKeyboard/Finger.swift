@@ -1,14 +1,14 @@
 struct Finger: Equatable, Hashable {
     enum Side {
-        case Left
-        case Right
+        case left
+        case right
     }
     enum Name {
-        case Pinky
-        case Ring
-        case Middle
-        case Index
-        case Thumb
+        case pinky
+        case ring
+        case middle
+        case index
+        case thumb
     }
     let side: Side
     let name: Name

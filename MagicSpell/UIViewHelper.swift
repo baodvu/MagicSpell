@@ -24,57 +24,57 @@ extension UIView {
     var top:        CGFloat { return self.frame.origin.y }
     var bottom:     CGFloat { return self.frame.origin.y + self.frame.size.height }
     
-    func setWidth(width:CGFloat)
+    func setWidth(_ width:CGFloat)
     {
         self.frame.size.width = width
     }
     
-    func setHeight(height:CGFloat)
+    func setHeight(_ height:CGFloat)
     {
         self.frame.size.height = height
     }
     
-    func setX(x:CGFloat) //only change the origin x
+    func setX(_ x:CGFloat) //only change the origin x
     {
-        self.frame.origin = CGPointMake(x, self.frame.origin.y)
+        self.frame.origin = CGPoint(x: x, y: self.frame.origin.y)
     }
     
-    func setY(y:CGFloat) //only change the origin x
+    func setY(_ y:CGFloat) //only change the origin x
     {
-        self.frame.origin = CGPointMake(self.frame.origin.x, y)
+        self.frame.origin = CGPoint(x: self.frame.origin.x, y: y)
     }
     
-    func setCenterX(x:CGFloat) //only change the origin x
+    func setCenterX(_ x:CGFloat) //only change the origin x
     {
-        self.center = CGPointMake(x, self.center.y)
+        self.center = CGPoint(x: x, y: self.center.y)
     }
     
-    func setCenterY(y:CGFloat) //only change the origin x
+    func setCenterY(_ y:CGFloat) //only change the origin x
     {
-        self.center = CGPointMake(self.center.x, y)
+        self.center = CGPoint(x: self.center.x, y: y)
     }
     
-    func roundCorner(radius:CGFloat)
+    func roundCorner(_ radius:CGFloat)
     {
         self.layer.cornerRadius = radius
     }
     
-    func setTop(top:CGFloat)
+    func setTop(_ top:CGFloat)
     {
         self.frame.origin.y = top
     }
     
-    func setLeft(left:CGFloat)
+    func setLeft(_ left:CGFloat)
     {
         self.frame.origin.x = left
     }
     
-    func setRight(right:CGFloat)
+    func setRight(_ right:CGFloat)
     {
         self.frame.origin.x = right - self.frame.size.width
     }
     
-    func setBottom(bottom:CGFloat)
+    func setBottom(_ bottom:CGFloat)
     {
         self.frame.origin.y = bottom - self.frame.size.height
     }
@@ -82,11 +82,11 @@ extension UIView {
 }
 
 extension UIColor {
-    static func Hexcolor(hexValue : NSInteger) -> UIColor {
+    static func Hexcolor(_ hexValue : NSInteger) -> UIColor {
         return UIColor.init(red: ((CGFloat)((hexValue & 0xFF0000) >> 16)) / 255.0, green: ((CGFloat)((hexValue & 0xFF00) >> 8)) / 255.0, blue: ((CGFloat)(hexValue & 0xFF)) / 255.0, alpha: 1.0)
     }
     
-    static func HexcolorA(hexValue : NSInteger, alphaValue: CGFloat) -> UIColor {
+    static func HexcolorA(_ hexValue : NSInteger, alphaValue: CGFloat) -> UIColor {
         return UIColor.init(red : ((CGFloat)((hexValue & 0xFF0000) >> 16)) / 255.0, green : ((CGFloat)((hexValue & 0xFF00) >> 8)) / 255.0, blue : ((CGFloat)(hexValue & 0xFF)) / 255.0, alpha : (alphaValue))
     }
 

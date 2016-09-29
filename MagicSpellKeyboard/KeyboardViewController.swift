@@ -32,17 +32,17 @@ class KeyboardViewController: UIInputViewController {
     
     var shiftKeyActive = false {
         didSet {
-            shiftButton.setImage(UIImage(named: shiftKeyActive ? "Shift - filled" : "Shift"), forState: .Normal)
+            shiftButton.setImage(UIImage(named: shiftKeyActive ? "Shift - filled" : "Shift"), for: UIControlState())
         }
     }
     
     var fingersPressed = Set<Finger>()
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
         let nib = UINib(nibName: "CustomKeyboardInterface", bundle: nil)
-        let objects = nib.instantiateWithOwner(self, options: nil)
+        let objects = nib.instantiate(withOwner: self, options: nil)
         customInterface = objects[0] as! UIView
         customInterface.frame = view.frame
     }
@@ -56,27 +56,27 @@ class KeyboardViewController: UIInputViewController {
         
         view.addSubview(customInterface)
 
-        buttonToFinger[leftPinkyFingerButton!] = Finger(side: .Left, name: .Pinky)
-        buttonToFinger[leftRingFingerButton!] = Finger(side: .Left, name: .Ring)
-        buttonToFinger[leftMiddleFingerButton!] = Finger(side: .Left, name: .Middle)
-        buttonToFinger[leftIndexFingerButton!] = Finger(side: .Left, name: .Index)
-        buttonToFinger[leftThumbFingerButton!] = Finger(side: .Left, name: .Thumb)
+        buttonToFinger[leftPinkyFingerButton!] = Finger(side: .left, name: .pinky)
+        buttonToFinger[leftRingFingerButton!] = Finger(side: .left, name: .ring)
+        buttonToFinger[leftMiddleFingerButton!] = Finger(side: .left, name: .middle)
+        buttonToFinger[leftIndexFingerButton!] = Finger(side: .left, name: .index)
+        buttonToFinger[leftThumbFingerButton!] = Finger(side: .left, name: .thumb)
         
-        buttonToFinger[rightPinkyFingerButton!] = Finger(side: .Right, name: .Pinky)
-        buttonToFinger[rightRingFingerButton!] = Finger(side: .Right, name: .Ring)
-        buttonToFinger[rightMiddleFingerButton!] = Finger(side: .Right, name: .Middle)
-        buttonToFinger[rightIndexFingerButton!] = Finger(side: .Right, name: .Index)
-        buttonToFinger[rightThumbFingerButton!] = Finger(side: .Right, name: .Thumb)
+        buttonToFinger[rightPinkyFingerButton!] = Finger(side: .right, name: .pinky)
+        buttonToFinger[rightRingFingerButton!] = Finger(side: .right, name: .ring)
+        buttonToFinger[rightMiddleFingerButton!] = Finger(side: .right, name: .middle)
+        buttonToFinger[rightIndexFingerButton!] = Finger(side: .right, name: .index)
+        buttonToFinger[rightThumbFingerButton!] = Finger(side: .right, name: .thumb)
         
         updateKeyLabels()
         
         // Set up Settings Slide-in
-        settingsOverlay.hidden = true
+        settingsOverlay.isHidden = true
         keyboardSizeStepper.maximumValue = 4
         keyboardSizeStepper.value = 2
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         setUpHeightConstraint()
@@ -88,10 +88,10 @@ class KeyboardViewController: UIInputViewController {
         if heightConstraint == nil {
             heightConstraint = NSLayoutConstraint(
                 item: self.view,
-                attribute: .Height,
-                relatedBy: .Equal,
+                attribute: .height,
+                relatedBy: .equal,
                 toItem: nil,
-                attribute: .NotAnAttribute,
+                attribute: .notAnAttribute,
                 multiplier: 0.0,
                 constant: customHeight
             )
@@ -108,12 +108,12 @@ class KeyboardViewController: UIInputViewController {
             let finger = buttonToFinger[key]
             var potentialFingerCombination = fingersPressed
             potentialFingerCombination.insert(finger!)
-            key.setTitle(LetterMapping.getLetter(potentialFingerCombination, isUpperCase: shiftKeyActive), forState: .Normal)
+            key.setTitle(LetterMapping.getLetter(potentialFingerCombination, isUpperCase: shiftKeyActive), for: UIControlState())
         }
     }
     
     func toggleShift() {
-        shiftButton.setImage(UIImage(named: shiftKeyActive ? "Shift" : "Shift - filled"), forState: .Normal)
+        shiftButton.setImage(UIImage(named: shiftKeyActive ? "Shift" : "Shift - filled"), for: UIControlState())
         shiftKeyActive = !shiftKeyActive
     }
     
@@ -143,13 +143,13 @@ class KeyboardViewController: UIInputViewController {
         proxy.insertText("\n")
     }
     
-    @IBAction func didTapShift(sender: UIButton) {
+    @IBAction func didTapShift(_ sender: UIButton) {
         shiftKeyActive = !shiftKeyActive
         updateKeyLabels()
     }
     
     
-    @IBAction func touchDownFinger(sender: UIButton) {
+    @IBAction func touchDownFinger(_ sender: UIButton) {
         let finger = buttonToFinger[sender]!
         fingersPressed.insert(finger)
         
@@ -167,7 +167,7 @@ class KeyboardViewController: UIInputViewController {
         updateKeyLabels()
     }
     
-    @IBAction func touchUpFinger(sender: UIButton) {
+    @IBAction func touchUpFinger(_ sender: UIButton) {
         fingersPressed.removeAll()
         shiftKeyActive = false
         updateKeyLabels()
@@ -175,21 +175,21 @@ class KeyboardViewController: UIInputViewController {
     
     @IBAction func openSettings() {
         settingsSlideIn.center.x += self.settingsSlideIn.frame.width
-        settingsOverlay.backgroundColor = settingsOverlay.backgroundColor?.colorWithAlphaComponent(0)
-        settingsOverlay.hidden = false
-        UIView.animateWithDuration(0.4) {
+        settingsOverlay.backgroundColor = settingsOverlay.backgroundColor?.withAlphaComponent(0)
+        settingsOverlay.isHidden = false
+        UIView.animate(withDuration: 0.4, animations: {
             self.settingsSlideIn.center.x -= self.settingsSlideIn.frame.width
-            self.settingsOverlay.backgroundColor = self.settingsOverlay.backgroundColor?.colorWithAlphaComponent(0.25)
-        }
+            self.settingsOverlay.backgroundColor = self.settingsOverlay.backgroundColor?.withAlphaComponent(0.25)
+        }) 
     }
     
     @IBAction func closeSettings() {
-        UIView.animateWithDuration(0.4, animations: {
+        UIView.animate(withDuration: 0.4, animations: {
             self.settingsSlideIn.center.x += self.settingsSlideIn.frame.width
-            self.settingsOverlay.backgroundColor = self.settingsOverlay.backgroundColor?.colorWithAlphaComponent(0)
-            }) {(_) -> Void in
-                self.settingsOverlay.hidden = true
-                self.settingsSlideIn.center.x -= self.settingsSlideIn.frame.width}
+            self.settingsOverlay.backgroundColor = self.settingsOverlay.backgroundColor?.withAlphaComponent(0)
+            }, completion: {(_) -> Void in
+                self.settingsOverlay.isHidden = true
+                self.settingsSlideIn.center.x -= self.settingsSlideIn.frame.width}) 
     }
 
     @IBAction func changeSize() {
