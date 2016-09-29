@@ -38,7 +38,7 @@
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGS-Cw-XuK" userLabel="Left Pinky">
                     <rect key="frame" x="58.5" y="72" width="92.5" height="138.5"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="gGS-Cw-XuK" secondAttribute="height" multiplier="2:3" id="PlW-fs-fqo"/>
                     </constraints>
@@ -65,7 +65,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVi-6P-CaR" userLabel="Left Ring">
                     <rect key="frame" x="159.5" y="24" width="92.5" height="138.5"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="SVi-6P-CaR" secondAttribute="height" multiplier="2:3" id="7HW-wA-RwF"/>
                     </constraints>
@@ -92,7 +92,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQX-3I-tth" userLabel="Left Middle">
                     <rect key="frame" x="259.5" y="8" width="92.5" height="138.5"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="JQX-3I-tth" secondAttribute="height" multiplier="2:3" id="yX5-Mf-0RP"/>
                     </constraints>
@@ -119,7 +119,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBV-fi-Mfj" userLabel="Left Index">
                     <rect key="frame" x="360.5" y="40" width="92.5" height="138.5"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="uBV-fi-Mfj" secondAttribute="height" multiplier="2:3" id="w8B-Xi-EJW"/>
                     </constraints>
@@ -146,7 +146,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IcH-KO-fdJ" userLabel="Left Thumb">
                     <rect key="frame" x="310.5" y="199.5" width="194" height="138.5"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="IcH-KO-fdJ" secondAttribute="height" multiplier="7:5" id="kmU-7e-Ytu"/>
                     </constraints>
@@ -173,7 +173,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7X-72-3cc" userLabel="Right Ring">
                     <rect key="frame" x="777.5" y="24" width="92.5" height="138.5"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -197,7 +197,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZwD-GV-kaU" userLabel="Right Middle">
                     <rect key="frame" x="677.5" y="8" width="92.5" height="138.5"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -221,7 +221,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3K-OF-cJy" userLabel="Right Pinky">
                     <rect key="frame" x="878.5" y="72.5" width="92.5" height="138.5"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -245,7 +245,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WaV-Jo-uR1" userLabel="Right Index">
                     <rect key="frame" x="576.5" y="40" width="92.5" height="138.5"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -269,7 +269,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9c-ZP-Eno" userLabel="Right Thumb">
                     <rect key="frame" x="525.5" y="199.5" width="194.5" height="138.5"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -399,7 +399,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYx-yL-eK4" userLabel="Spacebar">
                     <rect key="frame" x="335" y="346" width="360.5" height="58"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="calibratedRGB"/>
                     <size key="titleShadowOffset" width="0.0" height="1"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
