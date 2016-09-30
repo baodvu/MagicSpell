@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11521.1" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KeyboardViewController" customModule="MagicSpellKeyboard" customModuleProvider="target">
@@ -30,21 +31,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vlP-6m-bu8" userLabel="Spacer">
-                    <rect key="frame" x="512.5" y="8" width="5" height="330"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="5" id="lUR-uO-Ha3"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGS-Cw-XuK" userLabel="Left Pinky">
-                    <rect key="frame" x="58.5" y="72" width="92.5" height="138.5"/>
-                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="gGS-Cw-XuK" secondAttribute="height" multiplier="2:3" id="PlW-fs-fqo"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -54,7 +53,7 @@
                             <integer key="value" value="1"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                            <color key="value" red="0.38808900523560208" green="0.38808900523560208" blue="0.38808900523560208" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="value" red="0.38808900523560208" green="0.38808900523560208" blue="0.38808900523560208" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
@@ -64,14 +63,13 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVi-6P-CaR" userLabel="Left Ring">
-                    <rect key="frame" x="159.5" y="24" width="92.5" height="138.5"/>
-                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="SVi-6P-CaR" secondAttribute="height" multiplier="2:3" id="7HW-wA-RwF"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -81,7 +79,7 @@
                             <integer key="value" value="1"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                            <color key="value" red="0.3880890052" green="0.3880890052" blue="0.3880890052" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="value" red="0.3880890052" green="0.3880890052" blue="0.3880890052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
@@ -91,14 +89,13 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQX-3I-tth" userLabel="Left Middle">
-                    <rect key="frame" x="259.5" y="8" width="92.5" height="138.5"/>
-                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="JQX-3I-tth" secondAttribute="height" multiplier="2:3" id="yX5-Mf-0RP"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -108,7 +105,7 @@
                             <integer key="value" value="1"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                            <color key="value" red="0.3880890052" green="0.3880890052" blue="0.3880890052" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="value" red="0.3880890052" green="0.3880890052" blue="0.3880890052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
@@ -118,14 +115,13 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBV-fi-Mfj" userLabel="Left Index">
-                    <rect key="frame" x="360.5" y="40" width="92.5" height="138.5"/>
-                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="uBV-fi-Mfj" secondAttribute="height" multiplier="2:3" id="w8B-Xi-EJW"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -135,7 +131,7 @@
                             <integer key="value" value="1"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                            <color key="value" red="0.3880890052" green="0.3880890052" blue="0.3880890052" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="value" red="0.3880890052" green="0.3880890052" blue="0.3880890052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
@@ -145,14 +141,13 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IcH-KO-fdJ" userLabel="Left Thumb">
-                    <rect key="frame" x="310.5" y="199.5" width="194" height="138.5"/>
-                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="IcH-KO-fdJ" secondAttribute="height" multiplier="7:5" id="kmU-7e-Ytu"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -162,7 +157,7 @@
                             <integer key="value" value="1"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                            <color key="value" red="0.3880890052" green="0.3880890052" blue="0.3880890052" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="value" red="0.3880890052" green="0.3880890052" blue="0.3880890052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
@@ -172,11 +167,10 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7X-72-3cc" userLabel="Right Ring">
-                    <rect key="frame" x="777.5" y="24" width="92.5" height="138.5"/>
-                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -186,7 +180,7 @@
                             <integer key="value" value="1"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                            <color key="value" red="0.3880890052" green="0.3880890052" blue="0.3880890052" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="value" red="0.3880890052" green="0.3880890052" blue="0.3880890052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
@@ -196,11 +190,10 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZwD-GV-kaU" userLabel="Right Middle">
-                    <rect key="frame" x="677.5" y="8" width="92.5" height="138.5"/>
-                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -210,7 +203,7 @@
                             <integer key="value" value="1"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                            <color key="value" red="0.3880890052" green="0.3880890052" blue="0.3880890052" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="value" red="0.3880890052" green="0.3880890052" blue="0.3880890052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
@@ -220,11 +213,10 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3K-OF-cJy" userLabel="Right Pinky">
-                    <rect key="frame" x="878.5" y="72.5" width="92.5" height="138.5"/>
-                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -234,7 +226,7 @@
                             <integer key="value" value="1"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                            <color key="value" red="0.3880890052" green="0.3880890052" blue="0.3880890052" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="value" red="0.3880890052" green="0.3880890052" blue="0.3880890052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
@@ -244,11 +236,10 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WaV-Jo-uR1" userLabel="Right Index">
-                    <rect key="frame" x="576.5" y="40" width="92.5" height="138.5"/>
-                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -258,7 +249,7 @@
                             <integer key="value" value="1"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                            <color key="value" red="0.3880890052" green="0.3880890052" blue="0.3880890052" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="value" red="0.3880890052" green="0.3880890052" blue="0.3880890052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
@@ -268,11 +259,10 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9c-ZP-Eno" userLabel="Right Thumb">
-                    <rect key="frame" x="525.5" y="199.5" width="194.5" height="138.5"/>
-                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -282,7 +272,7 @@
                             <integer key="value" value="1"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                            <color key="value" red="0.3880890052" green="0.3880890052" blue="0.3880890052" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="value" red="0.3880890052" green="0.3880890052" blue="0.3880890052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
@@ -292,8 +282,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4w-V3-D7D" userLabel="Delete">
-                    <rect key="frame" x="703.5" y="346" width="122.5" height="58"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <size key="titleShadowOffset" width="0.0" height="1"/>
                     <state key="normal" image="Delete"/>
                     <userDefinedRuntimeAttributes>
@@ -306,8 +295,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDU-Sg-5uW" userLabel="Global">
-                    <rect key="frame" x="8" y="346" width="58" height="58"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="cDU-Sg-5uW" secondAttribute="height" multiplier="1:1" id="Gaq-H2-C2j"/>
                     </constraints>
@@ -323,8 +311,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPk-1i-epP" userLabel="Enter">
-                    <rect key="frame" x="834" y="346" width="122" height="58"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <size key="titleShadowOffset" width="0.0" height="1"/>
                     <state key="normal" title="enter"/>
                     <userDefinedRuntimeAttributes>
@@ -337,8 +324,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="200" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IuG-Az-cUa" userLabel="Shift ⇧">
-                    <rect key="frame" x="74" y="346" width="79" height="58"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <size key="titleShadowOffset" width="0.0" height="1"/>
                     <state key="normal" image="Shift"/>
                     <userDefinedRuntimeAttributes>
@@ -351,14 +337,13 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asc-HS-Cz2" userLabel="Settings">
-                    <rect key="frame" x="964" y="346" width="58" height="58"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="asc-HS-Cz2" secondAttribute="height" multiplier="1:1" id="h7g-Op-RlJ"/>
                     </constraints>
                     <size key="titleShadowOffset" width="0.0" height="1"/>
                     <state key="normal" image="Settings">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -370,8 +355,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otQ-vQ-Oct">
-                    <rect key="frame" x="161" y="346" width="78.5" height="58"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <size key="titleShadowOffset" width="0.0" height="1"/>
                     <state key="normal" title=","/>
                     <userDefinedRuntimeAttributes>
@@ -384,8 +368,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WxW-sg-fV9">
-                    <rect key="frame" x="247.5" y="346" width="79" height="57.5"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <size key="titleShadowOffset" width="0.0" height="1"/>
                     <state key="normal" title="."/>
                     <userDefinedRuntimeAttributes>
@@ -398,8 +381,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYx-yL-eK4" userLabel="Spacebar">
-                    <rect key="frame" x="335" y="346" width="360.5" height="58"/>
-                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.85944835680751164" green="0.85944835680751164" blue="0.85944835680751164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <size key="titleShadowOffset" width="0.0" height="1"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -411,53 +393,45 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eFW-X3-lx2" userLabel="Overlay">
-                    <rect key="frame" x="0.0" y="0.0" width="1030" height="412"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XlW-aR-HPd" userLabel="Settings slide-in">
-                            <rect key="frame" x="792" y="162" width="238" height="250"/>
                             <subviews>
                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="LJM-1O-H4d">
-                                    <rect key="frame" x="136" y="67" width="94" height="29"/>
                                     <connections>
                                         <action selector="changeSize" destination="-1" eventType="valueChanged" id="wlY-pV-MdX"/>
                                     </connections>
                                 </stepper>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keyboard size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7G-i5-rxy">
-                                    <rect key="frame" x="20" y="71" width="108" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhR-lQ-thp">
-                                    <rect key="frame" x="20" y="114" width="58" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATL-ed-vjD">
-                                    <rect key="frame" x="85" y="20" width="69" height="21"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TdV-Dl-7Bf">
-                                    <rect key="frame" x="20" y="200" width="198" height="30"/>
-                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <state key="normal" title="Close">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
                                         <action selector="closeSettings" destination="-1" eventType="touchUpInside" id="kzx-uJ-SD9"/>
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IE9-Tm-360">
-                                    <rect key="frame" x="20" y="153" width="95" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstItem="ATL-ed-vjD" firstAttribute="top" secondItem="XlW-aR-HPd" secondAttribute="top" constant="20" symbolic="YES" id="1JG-if-yj5"/>
                                 <constraint firstAttribute="height" constant="250" id="5Dn-lU-GaM"/>
@@ -477,7 +451,7 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.25132004310344819" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.25132004310344819" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="XlW-aR-HPd" firstAttribute="top" secondItem="eFW-X3-lx2" secondAttribute="top" id="8pr-kW-WNh"/>
                         <constraint firstAttribute="bottom" secondItem="XlW-aR-HPd" secondAttribute="bottom" id="Fju-QK-e5f"/>
@@ -490,7 +464,7 @@
                     </variation>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="sPk-1i-epP" firstAttribute="leading" secondItem="V4w-V3-D7D" secondAttribute="trailing" constant="8" symbolic="YES" id="0fB-9S-qpC"/>
                 <constraint firstItem="hYx-yL-eK4" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.14" id="2QB-wx-aPR"/>
