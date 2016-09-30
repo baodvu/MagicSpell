@@ -6,7 +6,7 @@ struct ColorScheme {
     fileprivate var colorMap: [Finger: UIColor]
     fileprivate let defaultColor = UIColor.lightGray
     
-    // Init with one single color - every key has the same color
+    // Init with one single UIColor - every key has the same color
     init(_ name: String, color: UIColor) {
         self.name = name
         colorMap = [
@@ -22,24 +22,9 @@ struct ColorScheme {
             Finger(side: .right, name: .pinky) : color
         ]
     }
-    
-    // Init with colors for a single hand - the other hand will use the same colors
-    init(_ name: String, color1: UIColor, color2: UIColor, color3: UIColor, color4: UIColor, color5: UIColor) {
-        self.name = name
-        colorMap = [
-            Finger(side: .left, name: .pinky) : color1,
-            Finger(side: .left, name: .ring) : color2,
-            Finger(side: .left, name: .middle) : color3,
-            Finger(side: .left, name: .index) : color4,
-            Finger(side: .left, name: .thumb) : color5,
-            Finger(side: .right, name: .thumb) : color5,
-            Finger(side: .right, name: .index) : color4,
-            Finger(side: .right, name: .middle) : color3,
-            Finger(side: .right, name: .ring) : color2,
-            Finger(side: .right, name: .pinky) : color1
-        ]
-    }
-    
+
+    // Init with an array of colors in hex.
+    // If the array length is less than 10, we will just reuse the colors.
     init(_ name: String, colors: [Int]) {
         assert(colors.count > 0, "Must pass in at least 1 color.")
         
