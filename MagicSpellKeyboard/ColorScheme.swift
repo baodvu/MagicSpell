@@ -4,10 +4,10 @@ struct ColorScheme {
     
     var name: String
     fileprivate var colorMap: [Finger: UIColor]
-    fileprivate var defaultColor = UIColor.lightGray
+    fileprivate let defaultColor = UIColor.lightGray
     
     // Init with one single color - every key has the same color
-    init(named name: String, color: UIColor) {
+    init(_ name: String, color: UIColor) {
         self.name = name
         colorMap = [
             Finger(side: .left, name: .pinky) : color,
@@ -24,7 +24,7 @@ struct ColorScheme {
     }
     
     // Init with colors for a single hand - the other hand will use the same colors
-    init(named name: String, color1: UIColor, color2: UIColor, color3: UIColor, color4: UIColor, color5: UIColor) {
+    init(_ name: String, color1: UIColor, color2: UIColor, color3: UIColor, color4: UIColor, color5: UIColor) {
         self.name = name
         colorMap = [
             Finger(side: .left, name: .pinky) : color1,
@@ -38,6 +38,23 @@ struct ColorScheme {
             Finger(side: .right, name: .ring) : color2,
             Finger(side: .right, name: .pinky) : color1
         ]
+    }
+    
+    init(_ name: String, colors: [Int]) {
+        assert(colors.count > 0, "Must pass in at least 1 color.")
+        
+        self.name = name
+        colorMap = [Finger: UIColor]()
+        colorMap[Finger(side: .left, name: .pinky)] = UIColor.init(hex: colors[0 % colors.count])
+        colorMap[Finger(side: .left, name: .ring)] = UIColor.init(hex: colors[1 % colors.count])
+        colorMap[Finger(side: .left, name: .middle)] = UIColor.init(hex: colors[2 % colors.count])
+        colorMap[Finger(side: .left, name: .index)] = UIColor.init(hex: colors[3 % colors.count])
+        colorMap[Finger(side: .left, name: .thumb)] = UIColor.init(hex: colors[4 % colors.count])
+        colorMap[Finger(side: .right, name: .pinky)] = UIColor.init(hex: colors[5 % colors.count])
+        colorMap[Finger(side: .right, name: .ring)] = UIColor.init(hex: colors[6 % colors.count])
+        colorMap[Finger(side: .right, name: .middle)] = UIColor.init(hex: colors[7 % colors.count])
+        colorMap[Finger(side: .right, name: .index)] = UIColor.init(hex: colors[8 % colors.count])
+        colorMap[Finger(side: .right, name: .thumb)] = UIColor.init(hex: colors[9 % colors.count])
     }
     
     func getColor(_ finger: Finger) -> UIColor {
@@ -54,31 +71,33 @@ struct ColorScheme {
     // MARK: Color schemes
     
     static func defaultMonochrome() -> ColorScheme {
-        return ColorScheme.init(named: "Monochrome", color: UIColor.lightGray.lighter(15.0)!)
+        return ColorScheme.init("Monochrome", color: UIColor.lightGray.lighter(15.0)!)
     }
     
     // Creator: Drew
     static func defaultPolychrome() -> ColorScheme {
-        return ColorScheme.init(named: "Default",
-                                color1: UIColor(red: 240/255, green: 173/255, blue: 173/255, alpha: 1.0) /* #f0adad */,
-            color2: UIColor(red: 255/255, green: 246/255, blue: 179/255, alpha: 1.0) /* #fff6b3 */,
-            color3: UIColor(red: 184/255, green: 222/255, blue: 185/255, alpha: 1.0) /* #b8deb9 */,
-            color4: UIColor(red: 167/255, green: 213/255, blue: 250/255, alpha: 1.0) /* #a7d5fa */,
-            color5: UIColor(red: 214/255, green: 169/255, blue: 222/255, alpha: 1.0) /* #d6a9de */)
+        return ColorScheme.init("Default", colors: [0xf0adad, 0xfff6b3, 0xb8deb9, 0xa7d5fa, 0xd6a9de])
     }
     
     // Creator: Bao
     static func paper() -> ColorScheme {
-        return ColorScheme.init(named: "Paper",
-                                color1: UIColor(red: 213/255, green: 192/255, blue: 240/255, alpha: 1.0) /* #d5c0f0 */,
-            color2: UIColor(red: 177/255, green: 223/255, blue: 224/255, alpha: 1.0) /* #b1dfe0 */,
-            color3: UIColor(red: 222/255, green: 218/255, blue: 140/255, alpha: 1.0) /* #deda8c */,
-            color4: UIColor(red: 247/255, green: 196/255, blue: 141/255, alpha: 1.0) /* #f7c48d */,
-            color5: UIColor(red: 240/255, green: 187/255, blue: 180/255, alpha: 1.0) /* #f0bbb4 */)
+        return ColorScheme.init("Paper", colors: [0xd5c0f0, 0xb1dfe0, 0xdeda8c, 0xf7c48d, 0xf0bbb4])
     }
 }
 
 extension UIColor {
+
+    convenience init(red: Int, green: Int, blue: Int) {
+        assert(red >= 0 && red <= 255, "Invalid red component")
+        assert(green >= 0 && green <= 255, "Invalid green component")
+        assert(blue >= 0 && blue <= 255, "Invalid blue component")
+        
+        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+    }
+    
+    convenience init(hex:Int) {
+        self.init(red:(hex >> 16) & 0xff, green:(hex >> 8) & 0xff, blue:hex & 0xff)
+    }
     
     func lighter(_ percentage:CGFloat=30.0) -> UIColor? {
         return self.adjust( abs(percentage) )
