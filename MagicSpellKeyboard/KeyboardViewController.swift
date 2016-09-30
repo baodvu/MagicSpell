@@ -2,12 +2,12 @@ import UIKit
 
 class KeyboardViewController: UIInputViewController {
     
+    // MARK: UI Components
     @IBOutlet weak var leftPinkyFingerButton: UIButton!
     @IBOutlet weak var leftRingFingerButton: UIButton!
     @IBOutlet weak var leftMiddleFingerButton: UIButton!
     @IBOutlet weak var leftIndexFingerButton: UIButton!
     @IBOutlet weak var leftThumbFingerButton: UIButton!
-    
     @IBOutlet weak var rightIndexFingerButton: UIButton!
     @IBOutlet weak var rightMiddleFingerButton: UIButton!
     @IBOutlet weak var rightRingFingerButton: UIButton!
@@ -25,17 +25,16 @@ class KeyboardViewController: UIInputViewController {
         get { return textDocumentProxy as UITextDocumentProxy }
     }
     
-    var buttonToFinger = [UIButton: Finger]()
-    
     var heightConstraint: NSLayoutConstraint!
     var keyboardHeight:CGFloat = 400
+    var buttonToFinger = [UIButton: Finger]()
     
+    // MARK: Keyboard states
     var shiftKeyActive = false {
         didSet {
             shiftButton.setImage(UIImage(named: shiftKeyActive ? "Shift - filled" : "Shift"), for: UIControlState())
         }
     }
-    
     var fingersPressed = Set<Finger>()
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -70,7 +69,7 @@ class KeyboardViewController: UIInputViewController {
         buttonToFinger[rightThumbFingerButton!] = Finger(side: .right, name: .thumb)
         
         updateKeyLabels()
-        
+
         // Set up Settings Slide-in
         settingsOverlay.isHidden = true
         keyboardSizeStepper.maximumValue = 4
