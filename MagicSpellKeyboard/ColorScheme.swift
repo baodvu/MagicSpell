@@ -69,19 +69,19 @@ struct ColorScheme {
     }
     
     // MARK: Color schemes
-    
-    static func defaultMonochrome() -> ColorScheme {
-        return ColorScheme.init("Monochrome", color: UIColor.lightGray.lighter(15.0)!)
+    // Default - black and white
+    static var defaultBW : ColorScheme {
+        get { return ColorScheme.init("Monochrome", color: UIColor.lightGray.lighter(15.0)!) }
     }
     
     // Creator: Drew
-    static func defaultPolychrome() -> ColorScheme {
-        return ColorScheme.init("Default", colors: [0xf0adad, 0xfff6b3, 0xb8deb9, 0xa7d5fa, 0xd6a9de])
+    static var rainbow : ColorScheme {
+        get { return ColorScheme.init("Rainbow", colors: [0xf0adad, 0xfff6b3, 0xb8deb9, 0xa7d5fa, 0xd6a9de]) }
     }
     
     // Creator: Bao
-    static func paper() -> ColorScheme {
-        return ColorScheme.init("Paper", colors: [0xd5c0f0, 0xb1dfe0, 0xdeda8c, 0xf7c48d, 0xf0bbb4])
+    static var paper : ColorScheme {
+        get { return ColorScheme.init("Paper", colors: [0xd5c0f0, 0xb1dfe0, 0xdeda8c, 0xf7c48d, 0xf0bbb4]) }
     }
 }
 
