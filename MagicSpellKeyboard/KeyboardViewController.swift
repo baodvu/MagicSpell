@@ -179,7 +179,7 @@ class KeyboardViewController: UIInputViewController {
     }
     
     @IBAction func touchUpFinger(_ sender: UIButton) {
-        sender.backgroundColor = colorScheme.getDarkerColor(buttonToFinger[sender]!)
+        sender.backgroundColor = colorScheme.getColor(buttonToFinger[sender]!)
         fingersPressed.removeAll()
         shiftKeyActive = false
         updateKeyLabels()
