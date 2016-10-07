@@ -11,6 +11,8 @@ import UIKit
 
 class SwitchKeyboardViewController: UIViewController {
     
+    static let nextScreenIdentifier = "mainView"
+    
     @IBOutlet var imageView: UIImageView!
     @IBOutlet weak var textField: UITextField!
     
@@ -43,7 +45,7 @@ class SwitchKeyboardViewController: UIViewController {
         // Please leave this print statement for debugging purposes
         print("received notification: \(name)")
         
-        let myView = (self.storyboard?.instantiateViewController(withIdentifier: "main"))! as UIViewController
+        let myView = (self.storyboard?.instantiateViewController(withIdentifier: SwitchKeyboardViewController.nextScreenIdentifier))! as UIViewController
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController = myView
     }

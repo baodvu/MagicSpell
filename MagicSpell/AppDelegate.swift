@@ -33,9 +33,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 
         if KeyboardActivation.isKeyboardActivated() {
-            if self.window!.rootViewController is InstrPageViewController {
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "switchKeyboard") as UIViewController
+            if self.window!.rootViewController is ActivateKeyboardViewController {
+                let storyboard = UIStoryboard(name: "main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: ActivateKeyboardViewController.nextScreenIdentifier) as UIViewController
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
                 appDelegate.window?.rootViewController = vc
             }

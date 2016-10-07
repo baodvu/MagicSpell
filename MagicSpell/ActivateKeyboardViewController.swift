@@ -1,5 +1,5 @@
 //
-//  InstrPageViewController.swift
+//  ActivateKeyboardViewController.swift
 //  MagicSpell
 //
 //  Created by Lingyi Li on 8/31/16.
@@ -9,9 +9,9 @@
 import UIKit
 import Foundation
 
-class InstrPageViewController: UIViewController{
+class ActivateKeyboardViewController: UIViewController{
     
-    static let nextScreen = SwitchKeyboardViewController()
+    static let nextScreenIdentifier = "switchKeyboardView"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,7 @@ class InstrPageViewController: UIViewController{
     
     override func viewDidAppear(_ animated: Bool) {
         if KeyboardActivation.isKeyboardActivated() {
-            let myView = (self.storyboard?.instantiateViewController(withIdentifier: "switchKeyboard"))! as UIViewController
+            let myView = (self.storyboard?.instantiateViewController(withIdentifier: ActivateKeyboardViewController.nextScreenIdentifier))! as UIViewController
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.window?.rootViewController = myView
         }

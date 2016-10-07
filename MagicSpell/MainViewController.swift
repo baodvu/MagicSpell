@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  MagicSpell
 //
 //  Created by Bao Vu on 1/31/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     let appGroup = "group.pentagon.magicspell"
     var sharedDefaults : UserDefaults?

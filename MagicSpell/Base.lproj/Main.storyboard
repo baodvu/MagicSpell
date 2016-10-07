@@ -9,7 +9,7 @@
         <!--MagicSpell-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="MagicSpell" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainViewController" customModule="MagicSpell" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -58,10 +58,10 @@
             </objects>
             <point key="canvasLocation" x="1716" y="329"/>
         </scene>
-        <!--Instr Page View Controller-->
+        <!--Activate Keyboard View Controller-->
         <scene sceneID="Ins-5l-WYq">
             <objects>
-                <viewController id="hXa-GB-92a" customClass="InstrPageViewController" customModule="MagicSpell" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="activateKeyboardView" id="hXa-GB-92a" customClass="ActivateKeyboardViewController" customModule="MagicSpell" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6eh-uj-5j6"/>
                         <viewControllerLayoutGuide type="bottom" id="zyS-ea-soA"/>
@@ -228,7 +228,7 @@ and come back here when done</string>
         <!--Switch Keyboard View Controller-->
         <scene sceneID="ija-ee-E5U">
             <objects>
-                <viewController storyboardIdentifier="switchKeyboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ws2-tZ-ORH" customClass="SwitchKeyboardViewController" customModule="MagicSpell" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="switchKeyboardView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ws2-tZ-ORH" customClass="SwitchKeyboardViewController" customModule="MagicSpell" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6Aw-IU-HcD"/>
                         <viewControllerLayoutGuide type="bottom" id="vLN-rv-Fmc"/>
