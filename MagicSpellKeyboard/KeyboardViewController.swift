@@ -1,3 +1,4 @@
+import Foundation
 import UIKit
 
 class KeyboardViewController: UIInputViewController {
@@ -19,6 +20,23 @@ class KeyboardViewController: UIInputViewController {
     @IBOutlet weak var keyboardSizeStepper: UIStepper!
     @IBOutlet weak var settingsOverlay: UIView!
     @IBOutlet weak var settingsSlideIn: UIView!
+    
+    let appGroup = "group.pentagon.magicspell"
+    var sharedDefaults : UserDefaults?
+    var keyboardSize : Int {
+        get {
+            if let s = sharedDefaults?.object(forKey: "keyboardSize") {
+                return s as! Int
+            }
+            sharedDefaults?.set(2, forKey: "keyboardSize")
+            sharedDefaults?.synchronize()
+            return 2 // Default keyboard size
+        }
+        set {
+            sharedDefaults?.set(newValue, forKey: "keyboardSize")
+            sharedDefaults?.synchronize()
+        }
+    }
     
     var customInterface: UIView!
     var proxy: UITextDocumentProxy {
@@ -44,6 +62,8 @@ class KeyboardViewController: UIInputViewController {
         let objects = nib.instantiate(withOwner: self, options: nil)
         customInterface = objects[0] as! UIView
         customInterface.frame = view.frame
+        
+        sharedDefaults = UserDefaults(suiteName: appGroup)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -73,13 +93,13 @@ class KeyboardViewController: UIInputViewController {
         // Set up Settings Slide-in
         settingsOverlay.isHidden = true
         keyboardSizeStepper.maximumValue = 4
-        keyboardSizeStepper.value = 2
+        keyboardSizeStepper.value = Double(keyboardSize)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        setUpHeightConstraint()
+        changeSize()
     }
     
     func sendKeyboardNotification() {
@@ -200,6 +220,7 @@ class KeyboardViewController: UIInputViewController {
 
     @IBAction func changeSize() {
         keyboardHeight = CGFloat(320 + keyboardSizeStepper.value * 30)
+        keyboardSize = Int(keyboardSizeStepper.value)
         setUpHeightConstraint()
     }
 }

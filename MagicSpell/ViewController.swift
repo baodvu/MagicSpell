@@ -9,11 +9,30 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    let appGroup = "group.pentagon.magicspell"
+    var sharedDefaults : UserDefaults?
+    var keyboardSize : Int {
+        get {
+            if let s = sharedDefaults?.object(forKey: "keyboardSize") {
+                return s as! Int
+            }
+            sharedDefaults?.set(2, forKey: "keyboardSize")
+            sharedDefaults?.synchronize()
+            return 2 // Default keyboard size
+        }
+        set {
+            sharedDefaults?.set(newValue, forKey: "keyboardSize")
+            sharedDefaults?.synchronize()
+        }
+    }
+    
     @IBOutlet weak var testTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        sharedDefaults = UserDefaults(suiteName: appGroup)
+        
         testTextView.layer.borderColor = UIColor.black.cgColor
         testTextView.layer.borderWidth = 1
         testTextView.layer.cornerRadius = 5
@@ -34,8 +53,5 @@ class ViewController: UIViewController {
     @IBAction func clearText() {
         testTextView.text = ""
     }
-    
-   
-
 }
 
