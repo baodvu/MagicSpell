@@ -35,19 +35,16 @@ class MainViewController: UIViewController {
         
         testTextView.becomeFirstResponder()
         
-//        if #available(iOS 9.0, *) {
-            let item : UITextInputAssistantItem = testTextView.inputAssistantItem
-            item.leadingBarButtonGroups = []
-            item.trailingBarButtonGroups = []
-        
-        print(keyboardSize)
+        let item : UITextInputAssistantItem = testTextView.inputAssistantItem
+        item.leadingBarButtonGroups = []
+        item.trailingBarButtonGroups = []
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     @IBAction func clearText() {
         testTextView.text = ""
     }
