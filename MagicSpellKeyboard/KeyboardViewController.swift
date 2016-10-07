@@ -28,6 +28,7 @@ class KeyboardViewController: UIInputViewController {
     var heightConstraint: NSLayoutConstraint!
     var keyboardHeight:CGFloat = 400
     var buttonToFinger = [UIButton: Finger]()
+    var colorScheme = ColorScheme.rainbow
     
     // MARK: Keyboard states
     var shiftKeyActive = false {
@@ -69,6 +70,9 @@ class KeyboardViewController: UIInputViewController {
         buttonToFinger[rightThumbFingerButton!] = Finger(side: .right, name: .thumb)
         
         updateKeyLabels()
+        for (key, value) in buttonToFinger {
+            key.backgroundColor = colorScheme.getColor(value)
+        }
 
         // Set up Settings Slide-in
         settingsOverlay.isHidden = true
@@ -158,6 +162,7 @@ class KeyboardViewController: UIInputViewController {
     @IBAction func touchDownFinger(_ sender: UIButton) {
         let finger = buttonToFinger[sender]!
         fingersPressed.insert(finger)
+        sender.backgroundColor = colorScheme.getDarkerColor(buttonToFinger[sender]!)
         
         // Update text field
         if let letter = LetterMapping.getLetter(fingersPressed, isUpperCase: shiftKeyActive) {
@@ -174,6 +179,7 @@ class KeyboardViewController: UIInputViewController {
     }
     
     @IBAction func touchUpFinger(_ sender: UIButton) {
+        sender.backgroundColor = colorScheme.getDarkerColor(buttonToFinger[sender]!)
         fingersPressed.removeAll()
         shiftKeyActive = false
         updateKeyLabels()
