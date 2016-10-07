@@ -21,10 +21,6 @@ class MainViewController: UIViewController {
             sharedDefaults?.synchronize()
             return 2 // Default keyboard size
         }
-        set {
-            sharedDefaults?.set(newValue, forKey: "keyboardSize")
-            sharedDefaults?.synchronize()
-        }
     }
     
     @IBOutlet weak var testTextView: UITextView!
@@ -43,6 +39,8 @@ class MainViewController: UIViewController {
             let item : UITextInputAssistantItem = testTextView.inputAssistantItem
             item.leadingBarButtonGroups = []
             item.trailingBarButtonGroups = []
+        
+        print(keyboardSize)
     }
 
     override func didReceiveMemoryWarning() {

@@ -398,7 +398,7 @@
                             <subviews>
                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="LJM-1O-H4d">
                                     <connections>
-                                        <action selector="changeSize" destination="-1" eventType="valueChanged" id="wlY-pV-MdX"/>
+                                        <action selector="changeKeyboardSize" destination="-1" eventType="valueChanged" id="lJZ-8o-PZe"/>
                                     </connections>
                                 </stepper>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keyboard size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7G-i5-rxy">

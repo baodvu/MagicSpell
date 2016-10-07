@@ -97,13 +97,11 @@ class KeyboardViewController: UIInputViewController {
         // Set up Settings Slide-in
         settingsOverlay.isHidden = true
         keyboardSizeStepper.maximumValue = 4
-        keyboardSizeStepper.value = Double(keyboardSize)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        changeSize()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setUpKeyboardSize()
     }
     
     func sendKeyboardNotification() {
@@ -224,9 +222,14 @@ class KeyboardViewController: UIInputViewController {
                 self.settingsSlideIn.center.x -= self.settingsSlideIn.frame.width}) 
     }
 
-    @IBAction func changeSize() {
+    @IBAction func changeKeyboardSize() {
         keyboardHeight = CGFloat(320 + keyboardSizeStepper.value * 30)
         keyboardSize = Int(keyboardSizeStepper.value)
         setUpHeightConstraint()
+    }
+    
+    func setUpKeyboardSize() {
+        keyboardSizeStepper.value = Double(keyboardSize)
+        changeKeyboardSize()
     }
 }
