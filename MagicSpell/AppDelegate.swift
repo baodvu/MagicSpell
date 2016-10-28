@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         if KeyboardActivation.isKeyboardActivated() {
             if self.window!.rootViewController is ActivateKeyboardViewController {
-                let storyboard = UIStoryboard(name: "main", bundle: nil)
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc = storyboard.instantiateViewController(withIdentifier: ActivateKeyboardViewController.nextScreenIdentifier) as UIViewController
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
                 appDelegate.window?.rootViewController = vc
