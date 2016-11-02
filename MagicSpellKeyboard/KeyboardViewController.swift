@@ -1,4 +1,5 @@
 import Foundation
+import AVFoundation
 import UIKit
 
 class KeyboardViewController: UIInputViewController {
@@ -20,6 +21,8 @@ class KeyboardViewController: UIInputViewController {
     @IBOutlet weak var keyboardSizeStepper: UIStepper!
     @IBOutlet weak var settingsOverlay: UIView!
     @IBOutlet weak var settingsSlideIn: UIView!
+    
+    var player: AVAudioPlayer?
     
     let appGroup = "group.pentagon.magicspell"
     var sharedDefaults : UserDefaults?
@@ -189,6 +192,7 @@ class KeyboardViewController: UIInputViewController {
                 fingersPressed.removeAll()
             }
             proxy.insertText(letter)
+            playSound(letter: letter)
         } else {
             // Invalid combination of keys, clear the stack
             fingersPressed.removeAll()
@@ -231,5 +235,20 @@ class KeyboardViewController: UIInputViewController {
     func setUpKeyboardSize() {
         keyboardSizeStepper.value = Double(keyboardSize)
         changeKeyboardSize()
+    }
+    
+    func playSound(letter: String)
+    {
+        let url = Bundle.main.url(forResource: "/Sounds/\(letter.uppercased())", withExtension: "wav")!
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            guard let player = player else { return }
+            
+            player.prepareToPlay()
+            player.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
     }
 }
