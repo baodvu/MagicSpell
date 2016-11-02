@@ -22,9 +22,11 @@
 		ACE4E9581D774AB300BE2C31 /* ActivateKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4E9571D774AB300BE2C31 /* ActivateKeyboardViewController.swift */; };
 		ACE4E95A1D77BE6F00BE2C31 /* UIViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4E9591D77BE6F00BE2C31 /* UIViewHelper.swift */; };
 		F31ABCCC1D9C917400BBEC35 /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31ABCCB1D9C917400BBEC35 /* ColorScheme.swift */; };
+		F323860C1DCA64DF00FE2214 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = F3C80DB71DCA5E2900E0C4EB /* Sounds */; };
 		F37FF0E31D94D3040007718F /* KeyboardActivation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37FF0E21D94D3040007718F /* KeyboardActivation.swift */; };
 		F38B91641D752D7100B6F45F /* Finger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38B91631D752D7100B6F45F /* Finger.swift */; };
 		F38B91661D75362300B6F45F /* LetterMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38B91651D75362300B6F45F /* LetterMapping.swift */; };
+		F3C80DB81DCA5E2900E0C4EB /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = F3C80DB71DCA5E2900E0C4EB /* Sounds */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,7 @@
 		F37FF0E21D94D3040007718F /* KeyboardActivation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardActivation.swift; sourceTree = "<group>"; };
 		F38B91631D752D7100B6F45F /* Finger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Finger.swift; sourceTree = "<group>"; };
 		F38B91651D75362300B6F45F /* LetterMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterMapping.swift; sourceTree = "<group>"; };
+		F3C80DB71DCA5E2900E0C4EB /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +165,7 @@
 		63F7B1331C5F091600D491B5 /* MagicSpellKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				F3C80DB71DCA5E2900E0C4EB /* Sounds */,
 				F30A1A2B1D9CCB440065C2E9 /* MagicSpellKeyboard.entitlements */,
 				F38B91621D752D1100B6F45F /* Models */,
 				63F7B1341C5F091600D491B5 /* KeyboardViewController.swift */,
@@ -301,6 +305,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F323860C1DCA64DF00FE2214 /* Sounds in Resources */,
 				63F7B1171C5F052A00D491B5 /* LaunchScreen.storyboard in Resources */,
 				63F7B1141C5F052A00D491B5 /* Assets.xcassets in Resources */,
 				63F7B12D1C5F07B300D491B5 /* LICENSE in Resources */,
@@ -319,6 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3C80DB81DCA5E2900E0C4EB /* Sounds in Resources */,
 				6356B12D1C5F2394004DF3AC /* Assets.xcassets in Resources */,
 				63F7B13F1C5F0A0400D491B5 /* CustomKeyboardInterface.xib in Resources */,
 			);
