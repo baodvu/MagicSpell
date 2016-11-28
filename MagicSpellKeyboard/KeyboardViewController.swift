@@ -49,7 +49,7 @@ class KeyboardViewController: UIInputViewController {
     var heightConstraint: NSLayoutConstraint!
     var keyboardHeight:CGFloat = 400
     var buttonToFinger = [UIButton: Finger]()
-    var colorScheme = ColorScheme.rainbow
+    var colorScheme = ColorScheme.green
     
     // MARK: Keyboard states
     var shiftKeyActive = false {
@@ -135,12 +135,14 @@ class KeyboardViewController: UIInputViewController {
     }
     
     func updateKeyLabels() {
+        // Disabled key labels
+        /*
         for key in buttonToFinger.keys {
             let finger = buttonToFinger[key]
             var potentialFingerCombination = fingersPressed
             potentialFingerCombination.insert(finger!)
             key.setTitle(LetterMapping.getLetter(potentialFingerCombination, isUpperCase: shiftKeyActive), for: UIControlState())
-        }
+        }*/
     }
     
     func toggleShift() {
@@ -160,6 +162,14 @@ class KeyboardViewController: UIInputViewController {
     
     @IBAction func didTapPeriod() {
         proxy.insertText(".")
+    }
+    
+    @IBAction func didTapExclamationMark() {
+        proxy.insertText("!")
+    }
+    
+    @IBAction func didTapQuestionMark() {
+        proxy.insertText("?")
     }
     
     @IBAction func didTapSpaceBar() {

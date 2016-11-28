@@ -54,9 +54,14 @@ struct ColorScheme {
     }
     
     // MARK: Color schemes
-    // Default - black and white
+    // Black and white
     static var defaultBW : ColorScheme {
         get { return ColorScheme.init("Monochrome", color: UIColor.lightGray.lighter(15.0)!) }
+    }
+    
+    // Default - Green
+    static var green : ColorScheme {
+        get { return ColorScheme.init("Green", colors: [0x79f579]) }
     }
     
     // Creator: Drew
