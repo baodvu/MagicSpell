@@ -5,6 +5,7 @@ struct ColorScheme {
     var name: String
     fileprivate var colorMap: [Finger: UIColor]
     fileprivate let defaultColor = UIColor.lightGray
+    var colors : [UIColor]
     
     // Init with one single UIColor - every key has the same color
     init(_ name: String, color: UIColor) {
@@ -21,6 +22,8 @@ struct ColorScheme {
             Finger(side: .right, name: .ring) : color,
             Finger(side: .right, name: .pinky) : color
         ]
+        
+        self.colors = [color]
     }
 
     // Init with an array of colors in hex.
@@ -40,6 +43,11 @@ struct ColorScheme {
         colorMap[Finger(side: .right, name: .middle)] = UIColor.init(hex: colors[7 % colors.count])
         colorMap[Finger(side: .right, name: .index)] = UIColor.init(hex: colors[8 % colors.count])
         colorMap[Finger(side: .right, name: .thumb)] = UIColor.init(hex: colors[9 % colors.count])
+        
+        self.colors = []
+        for hexVal in colors {
+            self.colors.append(UIColor.init(hex: hexVal))
+        }
     }
     
     func getColor(_ finger: Finger) -> UIColor {

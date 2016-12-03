@@ -17,6 +17,9 @@ class KeyboardViewController: UIInputViewController {
     @IBOutlet weak var rightThumbFingerButton: UIButton!
     
     @IBOutlet weak var shiftButton: UIButton!
+    @IBOutlet weak var bwColor: UIButton!
+    @IBOutlet weak var greenColor: UIButton!
+    @IBOutlet weak var rainbowColor: UIButton!
     
     @IBOutlet weak var keyboardSizeStepper: UIStepper!
     @IBOutlet weak var settingsOverlay: UIView!
@@ -93,13 +96,24 @@ class KeyboardViewController: UIInputViewController {
         buttonToFinger[rightThumbFingerButton!] = Finger(side: .right, name: .thumb)
         
         updateKeyLabels()
-        for (key, value) in buttonToFinger {
-            key.backgroundColor = colorScheme.getColor(value)
-        }
+        updateKeyColor()
 
         // Set up Settings Slide-in
         settingsOverlay.isHidden = true
         keyboardSizeStepper.maximumValue = 4
+        
+        bwColor.applyGradient(colours: ColorScheme.defaultBW.colors)
+        bwColor.layer.borderWidth = 1.0
+        bwColor.layer.borderColor = UIColor.lightGray.cgColor
+        bwColor.layer.cornerRadius = 2.0
+        greenColor.applyGradient(colours: ColorScheme.green.colors)
+        greenColor.layer.borderWidth = 1.0
+        greenColor.layer.borderColor = UIColor.lightGray.cgColor
+        greenColor.layer.cornerRadius = 2.0
+        rainbowColor.applyGradient(colours: ColorScheme.rainbow.colors)
+        rainbowColor.layer.borderWidth = 1.0
+        rainbowColor.layer.borderColor = UIColor.lightGray.cgColor
+        rainbowColor.layer.cornerRadius = 2.0
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -202,7 +216,7 @@ class KeyboardViewController: UIInputViewController {
                 fingersPressed.removeAll()
             }
             proxy.insertText(letter)
-            playSound(letter: letter)
+            // playSound(letter: letter)
         } else {
             // Invalid combination of keys, clear the stack
             fingersPressed.removeAll()
@@ -242,6 +256,24 @@ class KeyboardViewController: UIInputViewController {
         setUpHeightConstraint()
     }
     
+    @IBAction func changeColorTheme(_ sender: UIButton) {
+        switch sender {
+        case bwColor:
+            colorScheme = ColorScheme.defaultBW
+        case rainbowColor:
+            colorScheme = ColorScheme.rainbow
+        default:
+            colorScheme = ColorScheme.green
+        }
+        updateKeyColor()
+    }
+    
+    func updateKeyColor() {
+        for (key, value) in buttonToFinger {
+            key.backgroundColor = colorScheme.getColor(value)
+        }
+    }
+    
     func setUpKeyboardSize() {
         keyboardSizeStepper.value = Double(keyboardSize)
         changeKeyboardSize()
@@ -260,5 +292,15 @@ class KeyboardViewController: UIInputViewController {
         } catch let error {
             print(error.localizedDescription)
         }
+    }
+}
+
+extension UIButton {
+    func applyGradient(colours: [UIColor]) -> Void {
+        let view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 30.0, height: 30.0))
+        let gradient: CAGradientLayer = CAGradientLayer()
+        gradient.frame = view.bounds
+        gradient.colors = colours.map { $0.cgColor }
+        self.layer.insertSublayer(gradient, at: 0)
     }
 }
