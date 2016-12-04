@@ -1,5 +1,5 @@
-# MagicSpell
-[![Build Status](https://travis-ci.org/baodvu/MagicSpell.svg?branch=master)](https://travis-ci.org/baodvu/MagicSpell)
+MagicSpell [![Build Status](https://travis-ci.org/baodvu/MagicSpell.svg?branch=master)](https://travis-ci.org/baodvu/MagicSpell)
+=========
 
 A new and exciting way to type on iOS tablets.
 MagicSpell aims to assist children with dyslexia in improving their spelling skills by typing.
@@ -9,6 +9,8 @@ In a nutshell, it is a keyboard with only 10 input keys, allowing you to complet
 You must either use a single or a combination of keys to type a letter. The keys-to-letter mapping system is designed to promote fast learning for beginners.
 
 ![Alt text](keyboard.png "Key chording system")
+
+* Spelling practice: https://dlam30.github.io/WebTest/
 
 INSTALLATION
 ---------
@@ -47,4 +49,4 @@ KNOWN BUGS
   
 LICENSE
 ---------
-MIT licensed.
+[MIT licensed](https://github.com/baodvu/MagicSpell/blob/master/LICENSE)
