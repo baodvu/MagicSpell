@@ -14,20 +14,20 @@ You must either use a single or a combination of keys to type a letter. The keys
 
 INSTALLATION
 ---------
+PREREQUISITE
+- iOS version 9.0 or higher
 
-Prerequisite:
-	iOS version 9.0 or higher
+DOWNLOAD
+- MagicSpell will be released in the App Store
 
-Download: MagicSpell will be released in the App Store
-
-Installation steps:
+INSTALLATION STEPS
 - Go to Settings → General
 - Go to Keyboard → Keyboards
 - Click Add New Keyboard…
 - Choose MagicSpell
 
-Running:
-  MagicSpell runs as a standalone keyboard so you can pop it up inside any application by holding down the globe key
+RUNNING
+- MagicSpell runs as a standalone keyboard so you can pop it up inside any application by holding down the globe key
   
 RELEASE NOTES
 ---------
